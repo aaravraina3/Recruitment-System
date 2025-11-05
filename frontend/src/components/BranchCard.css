@@ -1,0 +1,46 @@
+.branch-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-left: 6px solid;
+}
+
+.branch-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.branch-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.branch-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.branch-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--generate-dark);
+    margin: 0;
+}
+
+.branch-preview {
+    color: #6B7280;
+    font-size: 14px;
+    margin: 0;
+}

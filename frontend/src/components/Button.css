@@ -1,0 +1,102 @@
+.btn {
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  min-width: 140px
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--generate-blue);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1873CC;
+}
+
+.btn-secondary {
+  background: #E5E7EB;
+  color: var(--generate-dark);
+}
+
+.btn-secondary:hover {
+  background: #D1D5DB;
+}
+
+.btn-black {
+    background: #000000;
+    color: white;
+}
+
+.btn-black:hover {
+    background: #1F2937;
+}
+
+.btn-software {
+  background: var(--software);
+  color: white;
+}
+
+.btn-software:hover {
+  background: #D97706;
+}
+
+.btn-hardware {
+  background: var(--hardware);
+  color: white;
+}
+
+.btn-hardware:hover {
+  background: #DC2626;
+}
+
+.btn-data {
+  background: var(--data);
+  color: white;
+}
+
+.btn-data:hover {
+  background: #059669;
+}
+
+.btn-finance {
+  background: var(--finance);
+  color: white;
+}
+
+.btn-finance:hover {
+  background: #EA580C;
+}
+
+.btn-marketing {
+  background: var(--marketing);
+  color: white;
+}
+
+.btn-marketing:hover {
+  background: #55C3E8;
+}
+
+.btn-community {
+  background: var(--community);
+  color: white;
+}
+
+.btn-community:hover {
+  background: #9333EA;
+}

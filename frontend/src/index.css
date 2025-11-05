@@ -1,0 +1,26 @@
+:root{
+  --generate-blue: #1E90FF;
+  --generate-purple: #6B46C1;
+  --generate-dark: #1F2937;
+  
+  --hardware: #EF4444;
+  --software: #F59E0B;
+  --data: #10B981;
+  --finance: #FB923C;
+  --marketing: #55C3E8;
+  --community: #A855F7;
+}
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothig: grayscale;
+  background: #F9FAFB;
+}
