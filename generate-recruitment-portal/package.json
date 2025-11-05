@@ -1,0 +1,8 @@
+{
+  "name": "generate-recruitment-portal",
+  "private": true,
+  "workspaces": [
+    "frontend-vanilla",
+    "frontend-react"
+  ]
+}

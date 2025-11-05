@@ -1,0 +1,1 @@
+/* Generate Recruitment Portal - Placeholder (React) */\n
