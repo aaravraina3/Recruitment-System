@@ -1,0 +1,88 @@
+import React from 'react';
+import './BranchSelection.css';
+import '../pages/Dashboard.css';
+import BranchCard from '../components/BranchCard';
+import { useNavigate } from 'react-router-dom';
+import { useUser, UserButton } from '@clerk/clerk-react';
+
+function BranchSelection() {
+    const navigate = useNavigate();
+    const { user } = useUser();
+
+    const branches = [
+        { id: 'software', name: 'Software', color: 'software' },
+        { id: 'hardware', name: 'Hardware', color: 'hardware' },
+        { id: 'data', name: 'Data', color: 'data' },
+        { id: 'finance', name: 'Finance', color: 'finance' },
+        { id: 'marketing', name: 'Marketing', color: 'marketing' },
+        { id: 'community', name: 'Community', color: 'community' }
+    ];
+
+    return (
+    <div className="dashboard-container">
+      <aside className="dashboard-sidebar">
+       <div className="sidebar-header" onClick={() => navigate('/dashboard')}>
+          <div className="logo-container">
+            <img 
+                src="/generate-logo.png" 
+                alt="Generate Logo" 
+                className="generate-logo-img"
+            />
+            <div className="logo-text">
+                <span className="logo-generate">GENERATE</span>
+                <span className="logo-recruitment">RECRUITMENT</span>
+            </div>
+        </div>
+        </div>
+        
+        <nav className="sidebar-nav">
+          <button className="nav-item" onClick={() => navigate('/branches')}>
+            <span className="nav-icon">◎</span>
+            Apply Now
+          </button>
+          <button className="nav-item" onClick={() => navigate('/my-applications')}>
+            <span className="nav-icon">❐</span>
+            My Active Applications
+          </button>
+        </nav>
+
+        <div className="sidebar-footer">
+          <div className="user-info">
+            <UserButton 
+              appearance={{
+                elements: {
+                  avatarBox: "w-10 h-10"
+                }
+              }}
+            />
+            <div className="user-details">
+              <p className="user-name">{user?.firstName} {user?.lastName}</p>
+              <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main className="dashboard-main">
+        <div className="branch-selection-content">
+          <div className="branch-header">
+            <h1 className="branch-page-title">Generate Branches</h1>
+          </div>
+
+          <div className="branch-grid-container">
+            {branches.map(branch => (
+              <BranchCard
+                key={branch.id}
+                branch={branch.name}
+                color={branch.color}
+                onClick={() => navigate(`/branch/${branch.id}`)}
+              />
+            ))}
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+}
+
+export default BranchSelection;

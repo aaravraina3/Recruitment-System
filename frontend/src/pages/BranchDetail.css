@@ -1,0 +1,105 @@
+.branch-detail-content {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: white;
+  border: 1px solid #E5E7EB;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--generate-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 32px;
+}
+
+.back-button:hover {
+  background: #F9FAFB;
+  border-color: var(--generate-blue);
+  color: var(--generate-blue);
+}
+
+.branch-detail-header {
+  padding: 60px 40px;
+  border-radius: 16px;
+  margin-bottom: 48px;
+  color: white;
+}
+
+.branch-software { background: linear-gradient(135deg, var(--software) 0%, #D97706 100%); }
+.branch-hardware { background: linear-gradient(135deg, var(--hardware) 0%, #DC2626 100%); }
+.branch-data { background: linear-gradient(135deg, var(--data) 0%, #059669 100%); }
+.branch-finance { background: linear-gradient(135deg, var(--finance) 0%, #EA580C 100%); }
+.branch-marketing { background: linear-gradient(135deg, var(--marketing) 0%, #0EA5E9 100%); }
+.branch-community { background: linear-gradient(135deg, var(--community) 0%, #9333EA 100%); }
+
+.branch-detail-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.branch-description {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.roles-section {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.roles-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: var(--generate-dark);
+}
+
+.roles-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.role-card {
+  background: #F9FAFB;
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 4px solid var(--generate-blue);
+  transition: all 0.3s;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.role-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--generate-dark);
+}
+
+.role-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #E5E7EB;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #6B7280;
+}
+
+.role-card button {
+  width: 100%;
+}

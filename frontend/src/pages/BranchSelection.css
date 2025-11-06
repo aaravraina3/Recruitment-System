@@ -1,0 +1,93 @@
+.branch-selection-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: #F9FAFB;
+}
+
+.branch-header {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.branch-selection-content {
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: white;
+  border: 1px solid #E5E7EB;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--generate-dark);
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 24px;
+}
+
+.back-button:hover {
+  background: #F9FAFB;
+  border-color: var(--generate-blue);
+  color: var(--generate-blue);
+}
+
+.branch-page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--generate-dark);
+  margin-bottom: 16px;
+  letter-spacing: -1px;
+  text-align: center;
+}
+
+.branch-page-subtitle {
+  font-size: 1.3rem;
+  color: #6B7280;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.branch-grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.branch-grid-container .branch-card {
+  padding: 40px 32px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .branch-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .branch-page-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .branch-selection-content {
+    padding: 20px;
+  }
+  
+  .branch-page-title {
+    font-size: 2rem;
+  }
+  
+  .branch-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

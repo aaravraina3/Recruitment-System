@@ -1,66 +1,89 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
-import Button from './components/Button';
-import Input from './components/Input';
-import BranchCard from './components/BranchCard';
-import Spinner from './components/Spinner';
-import Modal from './components/Modal';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { SignedIn, SignedOut } from '@clerk/clerk-react';
+import SignIn from './pages/SignIn';
+import Dashboard from './pages/Dashboard';
+import BranchSelection from './pages/BranchSelection';
+import BranchDetail from './pages/BranchDetail';
+import ApplicationForm from './pages/ApplicationForm';
+
 
 function App() {
-  const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const branches = [
-    { name: 'Software', color: 'software' },
-    { name: 'Hardware', color: 'hardware' },
-    { name: 'Data', color: 'data' },
-    { name: 'Finance', color: 'finance' },
-    { name: 'Marketing', color: 'marketing' },
-    { name: 'Community', color: 'community' }
-  ];
-
   return (
-    <div className="App">
-      <div className="container">
-        <h1>Beginning Design System</h1>
-        <p className="subtitle">Component library(will improve aesthetics on the go)</p>
-
-        <section className="section">
-          <h2>Branch Buttons</h2>
-          <div className="button-grid">
-            {branches.map(branch => (
-              <Button key={branch.name} variant={branch.color}>
-                {branch.name}
-              </Button>
-            ))}
-          </div>
-        </section>
-
-        <section className="section">
-          <h2>Branch Cards</h2>
-          <div className="branch-grid">
-            {branches.map(branch => (
-              <BranchCard
-                key={branch.name}
-                branch={branch.name}
-                color={branch.color}
-                onClick={() => alert(`Clicked ${branch.name}`)}
-              />
-            ))}
-          </div>
-        </section>
-
-        <section className="section">
-          <h2>Action Buttons</h2>
-          <div className="button-group">
-            <Button variant="primary">Apply Now</Button>
-            <Button variant="black">View Roles</Button>
-          </div>
-        </section>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route 
+          path="/sign-in" 
+          element={
+            <>
+              <SignedOut>
+                <SignIn />
+              </SignedOut>
+              <SignedIn>
+                <Navigate to="/dashboard" replace />
+              </SignedIn>
+            </>
+          } 
+        />
+        <Route 
+          path="/dashboard" 
+          element={
+            <>
+              <SignedIn>
+                <Dashboard />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+        <Route 
+          path="/branches" 
+          element={
+            <>
+              <SignedIn>
+                <BranchSelection />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+        <Route 
+          path="/branch/:branchId" 
+          element={
+            <>
+              <SignedIn>
+                <BranchDetail />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+        <Route 
+          path="/apply/:branchId/:roleId" 
+          element={
+            <>
+              <SignedIn>
+                <ApplicationForm />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+        <Route 
+          path="/" 
+          element={<Navigate to="/sign-in" replace />} 
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
