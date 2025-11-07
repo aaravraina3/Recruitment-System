@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './ApplicationForm.css';
 import '../pages/Dashboard.css';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -7,11 +7,158 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 import CountdownTimer from '../components/CountdownTimer';
 
+
+
+const ROLE_CONTENT = {
+  'swe-chief': {
+    title: 'SOFTWARE CHIEF APPLICATION',
+    branch: 'Software',
+    description: {
+      intro: 'Thank you for your interest in applying for the Software Chief role!',
+      beforeApplying: 'Before applying, please review the Missions, Values, & Priorities document.',
+      semester: 'These roles are for a single semester.',
+      sections: [
+        {
+          title: 'Software',
+          content: 'Student-led Software teams build projects for our clients in a fast-paced and engaging environment. Students receive experiential opportunities to work with real clients, collaborate with a tight-knit team to solve complex problems, and engage with a strong and high-achieving community.'
+        },
+        {
+          title: 'Chiefs Team',
+          content: 'The Chiefs Team is a group of leaders with unique areas of expertise, united by the shared goal of developing Software, its members, and themselves. Members of the Chief team are individuals whose diverse experiences empower them with knowledge required to guide and mentor Software\'s teams. Chiefs are looked to as leaders who teach and empower the next generation of builders and innovators.'
+        }
+      ],
+      responsibilities: [
+        'Working alongside project leads to scope projects and build development timelines',
+        'Assist in hiring tech leads in respective domains',
+        'Offering technical support to project teams',
+        'Designing and presenting bootcamps and technical workshops',
+        'Collaborate with other Chiefs to emphasize each others\' strengths and overcome weaknesses',
+        'Helping cultivate Generate\'s warm community by forging personal connections with team members',
+        'Take end-to-end ownership of new branch proposals and process changes',
+        'Facilitating branch-wide events to uplift project velocity'
+      ]
+    },
+    deadline: 'November 7th at 11:59pm'
+  },
+  
+  'mech-chief': {
+    title: 'MECHANICAL CHIEF APPLICATION',
+    branch: 'Hardware',
+    description: {
+      intro: 'Thank you for your interest in applying for the Mechanical Chief role!',
+      beforeApplying: 'Before applying, please review the documents Missions, Values, & Priorities and How Hardware Hires - Chiefs on how Hardware hires Chiefs',
+      semester: 'These roles are for a single semester. To see how each role fits into our current organization structure, please see the chart below.',
+      sections: [
+        {
+          title: 'Hardware',
+          content: 'Student-led Hardware teams build projects for our clients in a fast-paced and engaging environment. Students receive experiential opportunities to work with real clients, collaborate with a tight-knit team to solve complex problems, and engage with a strong and high-achieving community.'
+        },
+        {
+          title: 'Chiefs Team',
+          content: 'The Chiefs Team is a group of leaders with unique areas of expertise, united by the shared goal of developing Hardware, its members, and themselves. Members of the Chief team are individuals whose diverse experiences empower them with knowledge required to guide and mentor Hardware\'s teams. Chiefs are looked to as leaders who teach and empower the next generation of builders and innovators.'
+        }
+      ],
+      responsibilities: [
+        'Working alongside project leads to scope projects and build development timelines',
+        'Assist in hiring tech leads in respective domains',
+        'Offering technical support to project teams',
+        'Hosting design reviews at major project milestones',
+        'Designing and presenting bootcamps and technical workshops',
+        'Mentoring members in Hardware\'s Big/Little system',
+        'Collaborate with other Chiefs to emphasize each others\' strengths and overcome weaknesses',
+        'Divide and conquer responsibilities and tasks to give members the best possible experience',
+        'Attend team meetings regularly to tackle blockers and guide project direction'
+      ]
+    },
+    deadline: 'November 7th at 11:59pm'
+  },    
+
+    'ee-chief': {
+    title: 'ELECTRICAL CHIEF APPLICATION',
+    branch: 'Hardware',
+    description: {
+      intro: 'Thank you for your interest in applying for the Electrical Chief role!',
+      beforeApplying: 'Before applying, please review the documents Missions, Values, & Priorities and How Hardware Hires - Chiefs on how Hardware hires Chiefs',
+      semester: 'These roles are for a single semester. To see how each role fits into our current organization structure, please see the chart below.',
+      sections: [
+        {
+          title: 'Hardware',
+          content: 'Student-led Hardware teams build projects for our clients in a fast-paced and engaging environment. Students receive experiential opportunities to work with real clients, collaborate with a tight-knit team to solve complex problems, and engage with a strong and high-achieving community.'
+        },
+        {
+          title: 'Chiefs Team',
+          content: 'The Chiefs Team is a group of leaders with unique areas of expertise, united by the shared goal of developing Hardware, its members, and themselves. Members of the Chief team are individuals whose diverse experiences empower them with knowledge required to guide and mentor Hardware\'s teams. Chiefs are looked to as leaders who teach and empower the next generation of builders and innovators.'
+        }
+      ],
+      responsibilities: [
+        'Working alongside project leads to scope projects and build development timelines',
+        'Assist in hiring tech leads in respective domains',
+        'Offering technical support to project teams',
+        'Hosting design reviews at major project milestones',
+        'Designing and presenting bootcamps and technical workshops',
+        'Mentoring members in Hardware\'s Big/Little system',
+        'Collaborate with other Chiefs to emphasize each others\' strengths and overcome weaknesses',
+        'Divide and conquer responsibilities and tasks to give members the best possible experience',
+        'Attend team meetings regularly to tackle blockers and guide project direction'
+      ]
+    },
+    deadline: 'November 7th at 11:59pm'
+},
+
+    'data-chief': {
+    title: 'DATA CHIEF APPLICATION',
+    branch: 'data',
+    description: {
+      intro: 'Thank you for your interest in applying for the Data Chief role!',
+      beforeApplying: 'Before applying, please review the documents Missions, Values, & Priorities and How Data Hires - Chiefs on how Data hires Chiefs',
+      semester: 'These roles are for a single semester. To see how each role fits into our current organization structure, please see the chart below.',
+      sections: [
+        {
+          title: 'Data',
+          content: 'Data Science in Generate is a newly created branch this year that is striving to provide real-world data solutions to our clients. Projects can range from developing advanced machine learning models to designing intuitive dashboards and scalable data pipelines, each tailored to solve specific organizational challenges. This versatility not only demands technical rigor but also a deep understanding of stakeholder goals to drive meaningful impact.'
+        },
+        {
+          title: 'Chiefs Team',
+          content: 'The Chiefs Team is a group of leaders with unique areas of expertise, united by the shared goal of developing unique solutions in the data science field, its members, and themselves'
+        }
+      ],
+      responsibilities: [
+        'Working alongside project leads to scope projects and build development timelines',
+        'Assist in hiring tech leads in respective domains',
+        'Offering technical support to project teams',
+        'Hosting design reviews at major project milestones',
+        'Designing and presenting bootcamps and technical workshops',
+        'Mentoring members in Hardware\'s Big/Little system',
+        'Collaborate with other Chiefs to emphasize each others\' strengths and overcome weaknesses',
+        'Divide and conquer responsibilities and tasks to give members the best possible experience',
+        'Attend team meetings regularly to tackle blockers and guide project direction'
+      ]
+    },
+    deadline: 'November 7th at 11:59pm'
+    },
+    interviewRequirement: {
+      required: true,
+      title: 'Interview',
+      description: 'As part of the application, please prepare a slideshow to present for the interview. This slideshow should touch on:',
+      topics: [
+        'Why are you applying to this role?',
+        'Ideas on what workshops that would be effective for members.',
+        'How would you plan Bootcamp to get members ready for the semester and help them hit the ground running?',
+        'Your strengths as an engineer, mentor, and teammate.',
+        'How would you help a team that\'s stuck problem that you don\'t know how to do?'
+      ],
+      note: 'This should only be ~10 minutes long and presented in a relatively informal manner.',
+      prompt: 'Submit a link to your presentation',
+      additionalInfo: 'If selected for the interview, it will be structured such that you will present your presentation to me to start, and I will take notes and we\'ll have a conversation afterwards where I will ask clarifying questions and questions from my own template. Ultimately, this will be a two-way conversation that will represent the relationship between a Chief and Director in which I highly value your input and want to collaborate on improving outcomes for Hardware as a result of your proactive thinking. You will hear back within a week.'
+    },
+};
+
 function ApplicationForm() {
   const navigate = useNavigate();
   const { branchId, roleId } = useParams();
   const { user } = useUser();
   
+  const roleContent = ROLE_CONTENT[roleId] || ROLE_CONTENT['swe-chief'];
   const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState({
 
@@ -30,14 +177,29 @@ function ApplicationForm() {
     referralName: '',
     organizationalOutreach: '',
     
-
-    chiefPosition: '',
     timeCommitment: false,
     whyGenerate: '',
     changes: '',
     vision: '',
-    resume: null
+    resume: null,
+    presentationLink: ''
   });
+
+  useEffect(() => {
+    const saveInterval = setInterval(() => {
+      localStorage.setItem('application-draft', JSON.stringify(formData));
+      console.log('Application auto-saved');
+    }, 30000);
+
+    return () => clearInterval(saveInterval);
+  }, [formData]);
+
+  useEffect(() => {
+    const savedData = localStorage.getItem('application-draft');
+    if (savedData) {
+      setFormData(JSON.parse(savedData));
+    }
+  }, []);
 
 
   const deadline = new Date();
@@ -65,8 +227,14 @@ function ApplicationForm() {
                formData.pronouns && formData.major && formData.year && 
                formData.graduationSemester && formData.referralSource;
       case 3:
-        return formData.timeCommitment && formData.whyGenerate && formData.changes && formData.vision && 
-               formData.resume;
+        const needsPresentation = roleContent.interviewRequirement;
+        const baseValid = formData.timeCommitment && formData.whyGenerate && 
+                         formData.changes && formData.vision && formData.resume;
+        
+        if (needsPresentation) {
+          return baseValid && formData.presentationLink;
+        }
+        return baseValid;
       case 4:
         return true;
       default:
@@ -83,10 +251,11 @@ function ApplicationForm() {
   const prevStep = () => setCurrentStep(prev => Math.max(prev - 1, 1));
 
   const handleSubmit = () => {
+    localStorage.removeItem('application-draft');
     alert('Application submitted! (Backend integration coming soon)');
     navigate('/dashboard');
   };
-
+  {/*Left sidebar*/}
   return (
     <div className="dashboard-container">
       <aside className="dashboard-sidebar">
@@ -103,7 +272,7 @@ function ApplicationForm() {
             </div>
         </div>
         </div>
-
+        {/* The countdown timer */}
         <div className="sidebar-timer-container">
             <CountdownTimer 
             deadline={deadline.toISOString()} 
@@ -144,7 +313,7 @@ function ApplicationForm() {
           <button className="back-button" onClick={() => navigate(`/branch/${branchId}`)}>
             ← Back to Roles
           </button>
-
+                {/* Application progress bar*/}
           <div className="progress-bar">
             <div className={`progress-step ${currentStep >= 1 ? 'active' : ''}`}>
               <div className="step-number">1</div>
@@ -167,35 +336,34 @@ function ApplicationForm() {
             </div>
           </div>
 
+            {/* Application steps */}
           <div className="form-container">
             {currentStep === 1 && (
               <div className="form-step">
-                <h2 className="form-title">SOFTWARE CHIEF APPLICATION</h2>
-                <p className="form-subtitle">
-                  Thank you for your interest in applying for the Software Chief role!
-                </p>
+                <h2 className="form-title">{roleContent.title}</h2>
+                <p className="form-subtitle">{roleContent.description.intro}</p>
                 
                 <div className="role-description-box">
-                  <p><strong>These roles are for a single semester.</strong></p>
+                  {roleContent.description.beforeApplying && (
+                    <p>{roleContent.description.beforeApplying}</p>
+                  )}
                   
-                  <h3>Role Description</h3>
-                  <p><strong>Software</strong></p>
-                  <p>Student-led Software teams build projects for our clients in a fast-paced and engaging environment. Students receive experiential opportunities to work with real clients, collaborate with a tight-knit team to solve complex problems, and engage with a strong and high-achieving community.</p>
-                  
-                  <p><strong>Chiefs Team</strong></p>
-                  <p>The Chiefs Team is a group of leaders with unique areas of expertise, united by the shared goal of developing Software, its members, and themselves.</p>
-                  
-                  <p>Members of the Chief team are individuals whose diverse experiences empower them with knowledge required to guide and mentor Software's teams. Chiefs are looked to as leaders who teach and empower the next generation of builders and innovators.</p>
-                  
-                  <p><strong>Responsibilities include:</strong></p>
+                  <p><strong>{roleContent.description.semester}</strong></p>
+                  {roleContent.description.sections.map((section, idx) => (
+                    <div key={idx}>
+                      <h3>{section.title}</h3>
+                      <p>{section.content}</p>
+                    </div>
+                  ))}
+                  <h3>Responsibilities</h3>
                   <ul>
-                    <li>Working alongside project leads to scope projects and build development timelines</li>
-                    <li>Assist in hiring tech leads in respective domains</li>
-                    <li>Offering technical support to project teams</li>
-                    <li>Designing and presenting bootcamps and technical workshops</li>
-                    <li>Collaborate with other Chiefs to emphasize each others' strengths and overcome weaknesses</li>
-                    <li>Helping cultivate Generate's warm community by forging personal connections with team members</li>
+                    {roleContent.description.responsibilities.map((resp, idx) => (
+                      <li key={idx}>{resp}</li>
+                    ))}
                   </ul>
+                  <p style={{ marginTop: '24px', fontWeight: 'bold' }}>
+                    Applications close {roleContent.deadline}
+                  </p>
                 </div>
                 
                 <div className="form-actions">
@@ -407,6 +575,32 @@ function ApplicationForm() {
                       required
                     />
                   </div>
+
+                  {roleContent.interviewRequirement && (
+                    <div className="interview-requirement">
+                      <h3>{roleContent.interviewRequirement.title}</h3>
+                      <p className="field-description">{roleContent.interviewRequirement.description}</p>
+                      <ol className="interview-topics">
+                        {roleContent.interviewRequirement.topics.map((topic, idx) => (
+                          <li key={idx}>{topic}</li>
+                        ))}
+                      </ol>
+                      <p className="field-note">{roleContent.interviewRequirement.note}</p>
+                      
+                      <div className="input-wrapper">
+                        <label className="input-label">{roleContent.interviewRequirement.prompt} <span className="required">*</span></label>
+                        <Input
+                          name="presentationLink"
+                          value={formData.presentationLink}
+                          onChange={handleInputChange}
+                          placeholder="https://..."
+                          required
+                        />
+                      </div>
+                      
+                      <p className="field-description">{roleContent.interviewRequirement.additionalInfo}</p>
+                    </div>
+                  )}
 
                   <div className="input-wrapper">
                     <label className="input-label">In concise words: what changes or improvements would you like to bring to the branch or position? <span className="required">*</span></label>

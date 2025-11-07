@@ -11,10 +11,10 @@ const BRANCH_DATA = {
     color: 'software',
     description: 'Student-led Software teams build projects for our clients which push the bounds of possible. Students work together using industry standard tools and processes while forming lifelong bonds with each other.',
     roles: [
-      { id: 'swe-chief', title: 'Software Chief', level: 'leadership' },
+      { id: 'swe-chief', title: 'Software Chief', level: 'chief' },
       { id: 'swe-tech-lead', title: 'Software Tech Lead', level: 'lead' },
       { id: 'software-engineer', title: 'Software Engineer', level: 'engineer' },
-      { id: 'design-chief', title: 'Design Chief', level: 'leadership' },
+      { id: 'design-chief', title: 'Design Chief', level: 'chief' },
       { id: 'design-lead', title: 'Design Lead', level: 'lead' },
       { id: 'software-designer', title: 'Software Designer', level: 'engineer' }
     ]
@@ -24,9 +24,8 @@ const BRANCH_DATA = {
     color: 'hardware',
     description: 'Hardware teams design and build physical products, working with cutting-edge technology in mechanical, electrical, and embedded systems.',
     roles: [
-      { id: 'hw-director', title: 'Hardware Director', level: 'leadership' },
-      { id: 'mech-chief', title: 'Mech/ID Chief', level: 'leadership' },
-      { id: 'ee-chief', title: 'EE/ECE Chief', level: 'leadership' },
+      { id: 'mech-chief', title: 'Mech/ID Chief', level: 'chief' },
+      { id: 'ee-chief', title: 'EE/ECE Chief', level: 'chief' },
       { id: 'hw-tech-lead', title: 'Hardware Tech Lead', level: 'lead' },
       { id: 'mech-tech-lead', title: 'Mechanical Tech Lead', level: 'lead' },
       { id: 'electrical-engineer', title: 'Electrical Engineer', level: 'engineer' },
@@ -38,8 +37,7 @@ const BRANCH_DATA = {
     color: 'data',
     description: 'Data works to architect and implement data solutions; working on dashboards, machine learning models, and data pipelines that tell stories and drive impact.',
     roles: [
-      { id: 'data-director', title: 'Data Science Director', level: 'leadership' },
-      { id: 'data-chief', title: 'Data Science Chief', level: 'leadership' },
+      { id: 'data-chief', title: 'Data Science Chief', level: 'chief' },
       { id: 'data-project-lead', title: 'Data Science Project Lead', level: 'lead' },
       { id: 'data-tech-lead', title: 'Data Science Tech Lead', level: 'lead' },
       { id: 'data-scientist', title: 'Data Scientist', level: 'engineer' }
@@ -50,8 +48,7 @@ const BRANCH_DATA = {
     color: 'finance',
     description: "Generate's finance team is responsible for managing all Generate business expenses and ensuring the organization is able to continue operating with financial security.",
     roles: [
-      { id: 'finance-director', title: 'Finance Director', level: 'leadership' },
-      { id: 'financial-analyst', title: 'Financial Analyst', level: 'engineer' }
+      { id: 'financial-analyst', title: 'Financial Analyst', level: 'analyst' }
     ]
   },
   marketing: {
@@ -59,14 +56,13 @@ const BRANCH_DATA = {
     color: 'marketing',
     description: "Generate's marketing team is responsible for all external facing Generate matters including social media marketing, client acquisition, and Generate's annual showcase event.",
     roles: [
-      { id: 'marketing-director', title: 'Marketing Director', level: 'leadership' },
-      { id: 'outreach-coordinator', title: 'Outreach Coordinator', level: 'engineer' },
+      { id: 'outreach-coordinator', title: 'Outreach Coordinator', level: 'coordinator' },
       { id: 'branding-lead', title: 'Branding and Design Lead', level: 'lead' },
-      { id: 'design-associate', title: 'Design Associate', level: 'engineer' },
-      { id: 'social-media-coordinator', title: 'Social Media Coordinator', level: 'engineer' },
+      { id: 'design-associate', title: 'Design Associate', level: 'designer' },
+      { id: 'social-media-coordinator', title: 'Social Media Coordinator', level: 'coordinator'},
       { id: 'media-lead', title: 'Media & Production Lead', level: 'lead' },
-      { id: 'photographer', title: 'Photographer', level: 'engineer' },
-      { id: 'videographer', title: 'Videographer', level: 'engineer' }
+      { id: 'photographer', title: 'Photographer'},
+      { id: 'videographer', title: 'Videographer'}
     ]
   },
   community: {
@@ -74,13 +70,12 @@ const BRANCH_DATA = {
     color: 'community',
     description: 'Community ensures we foster a strong, passionate, inclusive Generate community, and are effectively sharing Generate\'s mission and accomplishments with the broader Northeastern community.',
     roles: [
-      { id: 'community-director', title: 'Community Director', level: 'leadership' },
-      { id: 'events-chief', title: 'Events Chief', level: 'leadership' },
-      { id: 'events-coordinator', title: 'Events Coordinator', level: 'engineer' },
-      { id: 'ld-chief', title: 'Learning and Development Chief', level: 'leadership' },
-      { id: 'ld-coordinator', title: 'L&D Coordinator', level: 'engineer' },
-      { id: 'alumni-chief', title: 'Alumni Relations Chief', level: 'leadership' },
-      { id: 'alumni-coordinator', title: 'Alumni Relations Coordinator', level: 'engineer' },
+      { id: 'events-chief', title: 'Events Chief', level: 'chief' },
+      { id: 'events-coordinator', title: 'Events Coordinator', level: 'coordinator' },
+      { id: 'ld-chief', title: 'Learning and Development Chief', level: 'chief' },
+      { id: 'ld-coordinator', title: 'L&D Coordinator', level: 'coordinator' },
+      { id: 'alumni-chief', title: 'Alumni Relations Chief', level: 'chief' },
+      { id: 'alumni-coordinator', title: 'Alumni Relations Coordinator', level: 'coordinator' },
       { id: 'internal-lead', title: 'Internal Lead', level: 'lead' },
       { id: 'internal-analyst', title: 'Internal Analyst', level: 'engineer' }
     ]
