@@ -339,3 +339,83 @@
     grid-template-columns: 1fr;
   }
 }
+
+.status-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.application-item {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.application-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.app-header h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--generate-dark);
+  margin: 0;
+}
+
+.app-branch {
+  padding: 6px 16px;
+  background: var(--generate-blue);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.applications-scroll {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.application-item-compact {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #F3F4F6;
+}
+
+.application-item-compact:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.app-header-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.app-role-compact {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--generate-dark);
+  margin: 0 0 8px 0;
+}
+
+.app-branch-badge-small {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}

@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import BranchSelection from './pages/BranchSelection';
 import BranchDetail from './pages/BranchDetail';
 import ApplicationForm from './pages/ApplicationForm';
+import MyApplications from './pages/MyApplications';
 
 
 function App() {
@@ -71,6 +72,20 @@ function App() {
             <>
               <SignedIn>
                 <ApplicationForm />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+
+        <Route 
+          path="/my-applications" 
+          element={
+            <>
+              <SignedIn>
+                <MyApplications />
               </SignedIn>
               <SignedOut>
                 <Navigate to="/sign-in" replace />

@@ -40,6 +40,7 @@ const ROLE_CONTENT = {
     },
     deadline: 'November 7th at 11:59pm'
   },
+
   
   'mech-chief': {
     title: 'MECHANICAL CHIEF APPLICATION',
@@ -251,10 +252,40 @@ function ApplicationForm() {
   const prevStep = () => setCurrentStep(prev => Math.max(prev - 1, 1));
 
   const handleSubmit = () => {
-    localStorage.removeItem('application-draft');
-    alert('Application submitted! (Backend integration coming soon)');
-    navigate('/dashboard');
+    const application = {
+    id: Date.now(),
+    role: roleId?.replace(/-/g, ' '),
+    branch: branchId,
+    branchColor: roleContent.branch.toLowerCase().replace(' ', '-'),
+    status: 'submitted',
+    submittedAt: new Date().toLocaleString('en-US', { 
+      month: 'short', 
+      day: 'numeric', 
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit'
+    }),
+    timestamps: {
+      'submitted': new Date().toLocaleString('en-US', { 
+        month: 'short', 
+        day: 'numeric', 
+        year: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit'
+      })
+    },
+    isSubmitted: true,
+    formData: formData
   };
+
+  const existingApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
+  existingApps.push(application);
+  localStorage.setItem('my-applications', JSON.stringify(existingApps));
+  localStorage.removeItem('application-draft');
+  alert('Application submitted successfully!');
+  navigate('/my-applications');
+  };
+
   {/*Left sidebar*/}
   return (
     <div className="dashboard-container">

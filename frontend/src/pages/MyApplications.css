@@ -1,0 +1,140 @@
+.my-applications-content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--generate-dark);
+  margin-bottom: 12px;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: #6B7280;
+  margin-bottom: 48px;
+}
+
+.empty-state {
+  background: white;
+  padding: 80px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.empty-icon {
+  font-size: 5rem;
+  margin-bottom: 24px;
+  opacity: 0.5;
+}
+
+.empty-state h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--generate-dark);
+  margin-bottom: 12px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: #6B7280;
+  margin-bottom: 32px;
+}
+
+.applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.application-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid var(--generate-blue);
+}
+
+.app-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.app-title-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.app-role-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--generate-dark);
+  margin: 0;
+}
+
+.app-branch-badge {
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge-software { background: var(--software); }
+.badge-electrical { background: var(--electrical); }
+.badge-data-science { background: var(--data-science); }
+.badge-finance { background: var(--finance); }
+.badge-marketing { background: var(--marketing); }
+.badge-community { background: var(--community); }
+
+.app-meta {
+  text-align: right;
+}
+
+.app-submitted {
+  font-size: 0.9rem;
+  color: #6B7280;
+  font-weight: 500;
+}
+
+.app-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  .my-applications-content {
+    padding: 20px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .app-card-header {
+    flex-direction: column;
+  }
+  
+  .app-meta {
+    text-align: left;
+  }
+  
+  .app-actions {
+    flex-direction: column;
+  }
+  
+  .app-actions button {
+    width: 100%;
+  }
+}

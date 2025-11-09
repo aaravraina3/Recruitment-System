@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
 import { useUser, UserButton } from '@clerk/clerk-react';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
+import StatusTracker from '../components/StatusTracker';
 
 function Dashboard() {
     const { user } = useUser();
     const navigate = useNavigate();
+
+    const [applications, setApplications] = useState([]);
+  
+    useEffect(() => {
+      const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
+      setApplications(savedApps);
+    }, []);
 
     const getGreeting = () => {
         const hour = new Date().getHours();
@@ -85,10 +93,43 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className="status-card">
+            <div className="status-card full-width">
               <h3 className="card-title">APPLICATION STATUS</h3>
               <div className="card-content">
-                <p className="no-applications">No applications submitted yet</p>
+                {applications.length === 0 ? (
+                  <p className="no-applications">No applications submitted yet</p>
+                ) : (
+                  <>
+                    <div className="applications-scroll">
+                      {applications.map(app => (
+                        <div key={app.id} className="application-item-compact">
+                          <div className="app-header-compact">
+                            <div>
+                              <h4 className="app-role-compact">{app.role}</h4>
+                              <span className={`app-branch-badge-small badge-${app.branchColor}`}>
+                                {app.branch}
+                              </span>
+                            </div>
+                          </div>
+                          <StatusTracker 
+                            currentStatus={app.status}
+                            timestamps={app.timestamps}
+                            compact={true}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    
+                    <div style={{ marginTop: '20px', textAlign: 'center' }}>
+                      <Button 
+                        variant="secondary" 
+                        onClick={() => navigate('/my-applications')}
+                      >
+                        View All Applications ({applications.length})
+                      </Button>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>

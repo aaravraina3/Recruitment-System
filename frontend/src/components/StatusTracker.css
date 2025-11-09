@@ -1,0 +1,150 @@
+.status-tracker {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.status-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.status-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+
+.status-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #E5E7EB;
+  color: #9CA3AF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.3s;
+  border: 4px solid #F3F4F6;
+}
+
+.status-step.completed .status-circle {
+  background: var(--generate-blue);
+  color: white;
+  border-color: var(--generate-blue);
+}
+
+.status-step.current .status-circle {
+  background: var(--generate-blue);
+  color: white;
+  border-color: var(--generate-blue);
+  box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.2);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 4px rgba(30, 144, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(30, 144, 255, 0.1);
+  }
+}
+
+.status-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+  text-align: center;
+}
+
+.status-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #6B7280;
+  margin-bottom: 4px;
+}
+
+.status-step.completed .status-label,
+.status-step.current .status-label {
+  color: var(--generate-dark);
+}
+
+.status-timestamp {
+  font-size: 12px;
+  color: #9CA3AF;
+}
+
+.status-line {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  right: -50%;
+  height: 4px;
+  background: #E5E7EB;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.status-line.completed {
+  background: var(--generate-blue);
+}
+
+.status-step:last-child ~ .status-line {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .status-steps {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .status-step {
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  
+  .status-info {
+    align-items: flex-start;
+    margin-top: 0;
+    margin-left: 16px;
+  }
+  
+  .status-line {
+    display: none;
+  }
+}
+
+.status-tracker-compact {
+  padding: 20px;
+}
+
+.status-tracker-compact .status-circle {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border: 3px solid #F3F4F6;
+}
+
+.status-tracker-compact .status-label {
+  font-size: 12px;
+}
+
+.status-tracker-compact .status-info {
+  margin-top: 8px;
+}
+
+.status-tracker-compact .status-line {
+  top: 20px;
+}
