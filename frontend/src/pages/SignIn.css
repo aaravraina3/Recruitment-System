@@ -1,0 +1,95 @@
+.signin-page {
+    display: flex;
+    min-height: 100vh;
+    background: white;
+}
+
+.signin-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: white;
+}
+
+.signin-content {
+    max-width: 450px;
+    width: 100%;
+}
+
+.signin-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--generate-dark);
+  margin-bottom: 16px;
+}
+
+.signin-subtitle {
+  font-size: 1.1rem;
+  color: #6B7280;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.signin-right {
+  flex: 1;
+  background: linear-gradient(135deg, #1E90FF 0%, #6B46C1 100%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.signin-branding {
+  padding: 40px;
+}
+
+.signin-brand-title {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.signin-brand-subtitle {
+  font-size: 1.3rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+.clerk-root {
+  width: 100%;
+}
+
+.clerk-card {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+
+@media (max-width: 768px) {
+  .signin-page {
+    flex-direction: column;
+  }
+  
+  .signin-right {
+    min-height: 250px;
+  }
+  
+  .signin-title {
+    font-size: 2rem;
+  }
+  
+  .signin-brand-title {
+    font-size: 2.5rem;
+  }
+}
