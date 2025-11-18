@@ -134,25 +134,40 @@ function BranchDetail() {
 
       <main className="dashboard-main">
         <div className="branch-detail-content">
-          <button className="back-button" onClick={() => navigate('/branches')}>
-            ← Back to Branches
+          <button className="back-button-modern" onClick={() => navigate('/branches')}>
+            <span className="back-arrow">←</span>
+            <span>Back to Branches</span>
           </button>
 
-          <div className={`branch-detail-header branch-${branch.color}`}>
-            <h1 className="branch-detail-title">{branch.name}</h1>
-            <p className="branch-description">{branch.description}</p>
+          <div className={`branch-hero-header branch-hero-${branch.color}`}>
+            <div className="branch-hero-content">
+              <div className="branch-hero-label">{branch.name.toUpperCase()}</div>
+              <h1 className="branch-hero-title">{branch.name}</h1>
+              <p className="branch-hero-description">{branch.description}</p>
+            </div>
+            <div className="branch-hero-decoration">
+              <div className="hero-decor-circle hero-decor-1"></div>
+              <div className="hero-decor-circle hero-decor-2"></div>
+            </div>
           </div>
 
-          <div className="roles-section">
-            <h2 className="roles-title">Available Roles</h2>
-            <div className="roles-grid">
+          <div className="roles-section-modern">
+            <div className="roles-header">
+              <h2 className="roles-title-modern">AVAILABLE ROLES</h2>
+              <p className="roles-count">{branch.roles.length} {branch.roles.length === 1 ? 'Position' : 'Positions'} Open</p>
+            </div>
+            <div className="roles-grid-modern">
               {branch.roles.map(role => (
-                <div key={role.id} className={`role-card role-${role.level}`}>
-                  <h3 className="role-title">{role.title}</h3>
-                  <span className="role-badge">{role.level}</span>
+                <div key={role.id} className={`role-card-modern role-card-${branch.color}`}>
+                  <div className="role-card-accent"></div>
+                  <div className="role-card-content">
+                  <h3 className="role-title-modern">{role.title}</h3>
+                  <span className={`role-badge-modern badge-${role.level}`}>{role.level}</span>
+                  </div>
                   <Button 
                     variant={branch.color}
                     onClick={() => navigate(`/apply/${branchId}/${role.id}`)}
+                    className="role-apply-button"
                   >
                     Apply for this role
                   </Button>

@@ -8,7 +8,7 @@ function SignIn() {
     { name: 'Hardware', color: '#FF6B6B' },
     { name: 'Software', color: '#FFB84D' },
     { name: 'Data', color: '#4ECDC4' },
-    { name: 'Finance', color: '#FF8C42' },
+    { name: 'Finance', color: ' #14437C ' },
     { name: 'Marketing', color: '#5DADE2' },
     { name: 'Community', color: '#9B7EDE' }
   ];

@@ -1,46 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .branch-card {
     background: white;
-    border-radius: 12px;
-    padding: 24px;
+    border-radius: 20px;
+    padding: 32px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    border-left: 6px solid;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.branch-card-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.branch-card:hover .branch-card-gradient {
+  opacity: 0.05;
+}
+
+.branch-card-software:hover {
+  border-color: #FFB84D;
+}
+
+.branch-card-hardware:hover {
+  border-color: #FF6B6B;
+}
+
+.branch-card-data:hover {
+  border-color: #4ECDC4;
+}
+
+.branch-card-finance:hover {
+  border-color:  #14437C ;
+}
+
+.branch-card-marketing:hover {
+  border-color: #5DADE2;
+}
+
+.branch-card-community:hover {
+  border-color: #9B7EDE;
 }
 
 .branch-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
 }
 
-.branch-header {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 12px;
+.branch-content {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
 .branch-icon {
-    width: 48px;
-    height: 48px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
+    padding: 12px;
+    transition: all 0.4s ease;
+    filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.15));
 }
 
 .branch-name {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 1.8rem;
+    font-weight: 400;
     color: var(--generate-dark);
     margin: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .branch-preview {
     color: #6B7280;
-    font-size: 14px;
+    font-size: 0.9rem;
     margin: 0;
+    font-weight: 500;
+}
+
+.branch-arrow {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  font-size: 1.5rem;
+  color: #D1D5DB;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.branch-card:hover .branch-arrow {
+  color: var(--generate-blue);
+  transform: translateX(4px);
+}
+
+.branch-card:hover .branch-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.branch-gear-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.branch-card:hover .branch-gear-img {
+  transform: rotate(15deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .branch-card {
+    padding: 28px;
+  }
+
+  .branch-icon {
+    width: 64px;
+    height: 64px;
+    font-size: 28px;
+  }
+
+  .branch-name {
+    font-size: 1.5rem;
+  }
+}
+
+.branch-card-software .branch-card-gradient {
+  background: linear-gradient(135deg, #FFB84D 0%, #FF9F1C 100%);
+}
+
+.branch-card-hardware .branch-card-gradient {
+  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
+}
+
+.branch-card-data .branch-card-gradient {
+  background: linear-gradient(135deg, #4ECDC4 0%, #3AB7AE 100%);
+}
+
+.branch-card-finance .branch-card-gradient {
+  background: linear-gradient(135deg, #23599c 0%, #14437C 100%);
+}
+
+.branch-card-marketing .branch-card-gradient {
+  background: linear-gradient(135deg, #5DADE2 0%, #3498DB 100%);
+}
+
+.branch-card-community .branch-card-gradient {
+  background: linear-gradient(135deg, #9B7EDE 0%, #7C5FC7 100%);
 }
