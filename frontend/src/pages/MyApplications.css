@@ -1,116 +1,386 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .my-applications-content {
   padding: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-.page-title {
+.applications-hero {
+  background: linear-gradient(135deg, #2E5C8A 0%, #1a1f2e 100%);
+  border-radius: 24px;
+  padding: 60px 60px;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(46, 92, 138, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-content-apps {
+  flex: 1;
+  color: white;
+}
+
+.applications-hero-title {
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 0 0 16px 0;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.applications-hero-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.applications-count-badge {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 24px 32px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.count-number {
+  display: block;
   font-size: 3rem;
   font-weight: 800;
-  color: var(--generate-dark);
-  margin-bottom: 12px;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
-.page-subtitle {
-  font-size: 1.2rem;
-  color: #6B7280;
-  margin-bottom: 48px;
+.count-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.empty-state {
+.empty-state-modern {
   background: white;
-  padding: 80px 40px;
-  border-radius: 16px;
+  padding: 100px 60px;
+  border-radius: 24px;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
 }
 
-.empty-icon {
-  font-size: 5rem;
-  margin-bottom: 24px;
-  opacity: 0.5;
+.empty-icon-modern {
+  font-size: 6rem;
+  margin-bottom: 32px;
+  opacity: 0.3;
 }
 
-.empty-state h2 {
-  font-size: 2rem;
-  font-weight: 700;
+.empty-title {
+  font-size: 2.5rem;
+  font-weight: 400;
   color: var(--generate-dark);
-  margin-bottom: 12px;
+  margin: 0 0 16px 0;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.empty-state p {
+.empty-description {
   font-size: 1.1rem;
   color: #6B7280;
-  margin-bottom: 32px;
+  margin: 0 0 40px 0;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.applications-list {
+.applications-list-modern {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
 }
 
-.application-card {
+.application-card-modern {
   background: white;
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  border-left: 6px solid var(--generate-blue);
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #E5E7EB;
+}
+
+.app-accent-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.application-software .app-accent-bar {
+  background: linear-gradient(90deg, #FFB84D 0%, #FF9F1C 100%);
+}
+
+.application-hardware .app-accent-bar {
+  background: linear-gradient(90deg, #FF6B6B 0%, #EE5A6F 100%);
+}
+
+.application-data .app-accent-bar {
+  background: linear-gradient(90deg, #4ECDC4 0%, #3AB7AE 100%);
+}
+
+.application-finance .app-accent-bar {
+  background: linear-gradient(90deg, #FF8C42 0%, #FF7622 100%);
+}
+
+.application-marketing .app-accent-bar {
+  background: linear-gradient(90deg, #5DADE2 0%, #3498DB 100%);
+}
+
+.application-community .app-accent-bar {
+  background: linear-gradient(90deg, #9B7EDE 0%, #7C5FC7 100%);
+}
+
+.application-card-modern:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+}
+
+.application-card-modern:hover .app-accent-bar {
+  opacity: 1;
+}
+
+.app-card-body {
+  padding: 20px;
 }
 
 .app-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #F3F4F6;
+  gap: 24px;
 }
 
-.app-title-section {
+.app-title-group {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+  flex: 1;
+  row-gap: 12px;
+  min-width: 0;
 }
 
-.app-role-title {
-  font-size: 1.8rem;
+.app-role-title-modern {
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--generate-dark);
   margin: 0;
+  font-family: 'Inter', sans-serif;
+  flex-shrink: 0;
+  line-height: 1.2;
 }
 
-.app-branch-badge {
-  padding: 8px 20px;
+.app-branch-pill {
+  padding: 6px 16px;
   border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
 }
 
-.badge-software { background: var(--software); }
-.badge-electrical { background: var(--electrical); }
-.badge-data-science { background: var(--data-science); }
-.badge-finance { background: var(--finance); }
-.badge-marketing { background: var(--marketing); }
-.badge-community { background: var(--community); }
-
-.app-meta {
-  text-align: right;
+.branch-pill-software {
+  background: linear-gradient(135deg, #FFB84D 0%, #FF9F1C 100%);
 }
 
-.app-submitted {
+.branch-pill-hardware {
+  background: linear-gradient(135deg, #FF6B6B 0%, #EE5A6F 100%);
+}
+
+.branch-pill-data {
+  background: linear-gradient(135deg, #4ECDC4 0%, #3AB7AE 100%);
+}
+
+.branch-pill-finance {
+  background: linear-gradient(135deg, #FF8C42 0%, #FF7622 100%);
+}
+
+.branch-pill-marketing {
+  background: linear-gradient(135deg, #5DADE2 0%, #3498DB 100%);
+}
+
+.branch-pill-community {
+  background: linear-gradient(135deg, #9B7EDE 0%, #7C5FC7 100%);
+}
+
+.app-timestamp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-top: 0; 
+}
+
+.timestamp-label {
+  font-size: 0.7rem;
+  color: #9CA3AF;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1;
+}
+
+.timestamp-value {
   font-size: 0.9rem;
-  color: #6B7280;
-  font-weight: 500;
+  color: var(--generate-dark);
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
-.app-actions {
+.app-status-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 16px;
+}
+
+.app-actions-modern {
   display: flex;
   gap: 12px;
-  margin-top: 24px;
   justify-content: flex-end;
+}
+
+.draft-badge {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #FEF3C7;
+  color: #D97706;
+  flex-shrink: 0;
+}
+
+.draft-progress-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #F9FAFB;
+  border-radius: 16px;
+}
+
+.progress-bar-container {
+  width: 100%;
+  height: 12px;
+  background: #E5E7EB;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4A90E2 0%, #357ABD 100%);
+  border-radius: 6px;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #6B7280;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.applications-hero {
+    flex-direction: column;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .applications-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .applications-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .app-header-modern {
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #F3F4F6;
+  gap: 24px;
+  flex-wrap: wrap; 
+  }
+
+  .app-actions-modern {
+    flex-direction: column;
+  }
+
+  .app-actions-modern button {
+    width: 100%;
+  }
+
+
+@media (max-width: 1024px) {
+  .applications-hero-title {
+    font-size: 3rem;
+  }
+
+  .applications-count-badge {
+    padding: 20px 28px;
+  }
+
+  .count-number {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .applications-hero-title {
+    font-size: 2rem;
+  }
+
+  .app-role-title-modern {
+    font-size: 1.5rem;
+  }
+
+  .empty-state-modern {
+    padding: 60px 30px;
+  }
+
+  .empty-title {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -118,23 +388,7 @@
     padding: 20px;
   }
   
-  .page-title {
-    font-size: 2rem;
-  }
-  
-  .app-card-header {
-    flex-direction: column;
-  }
-  
-  .app-meta {
-    text-align: left;
-  }
-  
-  .app-actions {
-    flex-direction: column;
-  }
-  
-  .app-actions button {
-    width: 100%;
-  }
 }
+
+
+  

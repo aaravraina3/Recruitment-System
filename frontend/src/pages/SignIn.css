@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 .signin-page {
     display: flex;
     min-height: 100vh;
     background: white;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 .signin-left {
@@ -11,42 +15,56 @@
     justify-content: center;
     padding: 40px;
     background: white;
+    animation: fadeInUp 0.6s ease-out;
 }
 
 .signin-content {
     max-width: 450px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .signin-title {
-  font-size: 3rem;
+  font-size: 3.75rem;
   font-weight: 700;
   color: var(--generate-dark);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;   
+  text-align: center; 
 }
 
 .signin-subtitle {
-  font-size: 1.1rem;
-  color: #6B7280;
+  font-size: 1rem;
+  color: #666;
   margin-bottom: 40px;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: center;
+  font-weight: 400;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .signin-right {
   flex: 1;
-  background: linear-gradient(135deg, #1E90FF 0%, #6B46C1 100%);
+  background: linear-gradient(135deg, #2E5C8A 0%, #0A0A0A 100%);
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .signin-overlay {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   color: white;
+  animation: fadeIn 1s ease-out;
 }
 
 .signin-branding {
@@ -54,14 +72,17 @@
 }
 
 .signin-brand-title {
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 6rem;
+  font-weight: 400;
   margin-bottom: 16px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.05em;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
 }
 
 .signin-brand-subtitle {
-  font-size: 1.3rem;
+  font-size: 1.7rem;
   font-weight: 300;
   opacity: 0.95;
 }
@@ -75,6 +96,233 @@
   background: transparent !important;
 }
 
+.clerk-button-primary {
+  background: #4A90E2 !important;
+  color: white !important;
+  border-radius: 8px !important;
+  padding: 12px 24px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.clerk-button-primary:hover {
+  background: #357ABD !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3) !important;
+}
+
+.clerk-social-button {
+  border: 1.5px solid #E5E5E5 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.clerk-social-button:hover {
+  border-color: #4A90E2 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+}
+
+.clerk-input {
+  border: 2px solid #E5E5E5 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  font-size: 1rem !important;
+  transition: all 0.3s ease !important;
+  font-family: 'Inter', sans-serif !important;
+}
+
+.clerk-input:focus {
+  border-color: #4A90E2 !important;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1) !important;
+  outline: none !important;
+}
+
+.generate-image-container {
+  margin-bottom: 3rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.generate-image {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.generate-image:hover {
+  transform: scale(1.05);
+}
+
+.typing-container {
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: white;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.typing-prefix {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+}
+
+.typing-text {
+  display: inline-block;
+  min-width: 20px;
+  text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+  transition: color 0.5s ease;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.typing-cursor {
+  color: white;
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+.decorative-circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  animation: float-circles 20s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.circle:nth-child(1) {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.circle:nth-child(2) {
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  right: -50px;
+  animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+  width: 150px;
+  height: 150px;
+  bottom: 10%;
+  left: 20%;
+  animation-delay: 4s;
+}
+
+.circle:nth-child(4) {
+  width: 250px;
+  height: 250px;
+  top: 20%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.circle:nth-child(5) {
+  width: 180px;
+  height: 180px;
+  bottom: -50px;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+.circle:nth-child(6) {
+  width: 220px;
+  height: 220px;
+  top: 40%;
+  left: 10%;
+  animation-delay: 5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes float-circles {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .signin-brand-title {
+    font-size: 3rem;
+  }
+  .typing-container {
+    font-size: 1.5rem;
+  }
+  .generate-image {
+    max-width: 250px;
+  }
+}
 
 @media (max-width: 768px) {
   .signin-page {
@@ -82,7 +330,7 @@
   }
   
   .signin-right {
-    min-height: 250px;
+    min-height: 400px;
   }
   
   .signin-title {
@@ -91,5 +339,43 @@
   
   .signin-brand-title {
     font-size: 2.5rem;
+  }
+  .typing-container {
+    font-size: 1.25rem;
+  }
+
+  .generate-image {
+    max-width: 200px;
+  }
+
+  .signin-branding {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signin-title {
+    font-size: 1.75rem;
+  }
+
+  .signin-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .signin-brand-title {
+    font-size: 2rem;
+  }
+
+  .signin-brand-subtitle {
+    font-size: 1rem;
+  }
+
+  .typing-container {
+    font-size: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .generate-image {
+    max-width: 180px;
   }
 }

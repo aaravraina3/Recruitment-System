@@ -1,105 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 .branch-detail-content {
   padding: 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-.back-button {
+.back-button-modern {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   background: white;
-  border: 1px solid #E5E7EB;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 14px;
+  border: 2px solid #E5E7EB;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--generate-dark);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: all 0.3s ease;
   margin-bottom: 32px;
+  font-family: 'Inter', sans-serif;
 }
 
-.back-button:hover {
+.back-button-modern:hover {
   background: #F9FAFB;
-  border-color: var(--generate-blue);
-  color: var(--generate-blue);
+  border-color: #4A90E2;
+  color: #4A90E2;
+  transform: translateX(-4px);
 }
 
-.branch-detail-header {
-  padding: 60px 40px;
-  border-radius: 16px;
-  margin-bottom: 48px;
+.back-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.back-button-modern:hover .back-arrow {
+  transform: translateX(-4px);
+}
+
+.branch-hero-header {
+  padding: 80px 60px;
+  border-radius: 24px;
+  margin-bottom: 60px;
   color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
-.branch-software { background: linear-gradient(135deg, var(--software) 0%, #D97706 100%); }
-.branch-hardware { background: linear-gradient(135deg, var(--hardware) 0%, #DC2626 100%); }
-.branch-data { background: linear-gradient(135deg, var(--data) 0%, #059669 100%); }
-.branch-finance { background: linear-gradient(135deg, var(--finance) 0%, #EA580C 100%); }
-.branch-marketing { background: linear-gradient(135deg, var(--marketing) 0%, #0EA5E9 100%); }
-.branch-community { background: linear-gradient(135deg, var(--community) 0%, #9333EA 100%); }
+.branch-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
 
-.branch-detail-title {
-  font-size: 3.5rem;
-  font-weight: 800;
+.branch-hero-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  opacity: 0.8;
+  margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+}
+
+.branch-hero-title {
+  font-size: 5rem;
+  font-weight: 400;
+  margin: 0 0 24px 0;
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.branch-hero-description {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin: 0;
+  font-weight: 300;
+}
+
+.branch-hero-software { background: linear-gradient(135deg, #FFB84D 0%, #FF8C00 100%); }
+.branch-hero-hardware { background: linear-gradient(135deg, #FF6B6B 0%, #DC143C 100%); }
+.branch-hero-data { background: linear-gradient(135deg, #4ECDC4 0%, #00A896 100%); }
+.branch-hero-finance { background: linear-gradient(135deg, #194d8c 0%, #14437C 100%); }
+.branch-hero-marketing { background: linear-gradient(135deg, #5DADE2 0%, #2E86DE 100%); }
+.branch-hero-community { background: linear-gradient(135deg, #9B7EDE 0%, #7B2FBF 100%); }
+
+.branch-hero-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-decor-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.1;
+}
+
+.hero-decor-1 {
+  width: 400px;
+  height: 400px;
+  top: -150px;
+  right: -100px;
+}
+
+.hero-decor-2 {
+  width: 250px;
+  height: 250px;
+  bottom: -80px;
+  right: 150px;
+}
+
+.roles-section-modern {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 24px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+
+.roles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid #E5E7EB;
+}
+
+.roles-title-modern {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  color: var(--generate-dark);
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+.roles-count {
+  font-size: 1rem;
+  color: #6B7280;
+  font-weight: 600;
+  margin: 0;
+}
+
+.roles-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 28px;
+}
+
+.role-card-modern {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 100%);
+  padding: 32px;
+  border-radius: 20px;
+  border: 2px solid #E5E7EB;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.role-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.role-card-software::before {
+  background: linear-gradient(90deg, #FFB84D 0%, #FF9F1C 100%);
+}
+
+.role-card-hardware::before {
+  background: linear-gradient(90deg, #FF6B6B 0%, #EE5A6F 100%);
+}
+
+.role-card-data::before {
+  background: linear-gradient(90deg, #4ECDC4 0%, #3AB7AE 100%);
+}
+
+.role-card-finance::before {
+  background: linear-gradient(90deg, #194d8c 0%, #14437C 100%);
+}
+
+.role-card-marketing::before {
+  background: linear-gradient(90deg, #5DADE2 0%, #3498DB 100%);
+}
+
+.role-card-community::before {
+  background: linear-gradient(90deg, #9B7EDE 0%, #7C5FC7 100%);
+}
+
+.role-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+}
+
+.role-card-modern:hover::before {
+  opacity: 1;
+}
+
+.role-card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.role-title-modern {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: var(--generate-dark);
+  font-family: 'Inter', sans-serif;
+}
+
+.role-badge-modern {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   margin-bottom: 16px;
 }
 
-.branch-description {
-  font-size: 1.3rem;
-  line-height: 1.6;
-  opacity: 0.95;
+.badge-chief {
+  background: #FEE2E2;
+  color: #DC2626;
 }
 
-.roles-section {
-  background: white;
-  padding: 40px;
-  border-radius: 16px;
+.badge-lead {
+  background: #DBEAFE;
+  color: #2563EB;
 }
 
-.roles-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 32px;
-  color: var(--generate-dark);
+.badge-engineer,
+.badge-designer,
+.badge-analyst {
+  background: #D1FAE5;
+  color: #059669;
 }
 
-.roles-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 24px;
+.badge-coordinator {
+  background: #FCE7F3;
+  color: #DB2777;
 }
 
-.role-card {
-  background: #F9FAFB;
-  padding: 32px;
-  border-radius: 12px;
-  border-left: 4px solid var(--generate-blue);
-  transition: all 0.3s;
+.badge-photographer,
+.badge-videographer {
+  background: #E0E7FF;
+  color: #6366F1;
 }
 
-.role-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.role-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--generate-dark);
-}
-
-.role-badge {
-  display: inline-block;
-  padding: 4px 12px;
-  background: #E5E7EB;
-  border-radius: 12px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  color: #6B7280;
-}
-
-.role-card button {
+.role-apply-button {
   width: 100%;
+  margin-top: 0;
+}
+
+@media (max-width: 1200px) {
+  .branch-hero-title {
+    font-size: 4rem;
+  }
+
+  .branch-hero-description {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .roles-grid-modern {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .branch-hero-header {
+    padding: 60px 40px;
+  }
+
+  .branch-hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .branch-detail-content {
+    padding: 20px;
+  }
+
+  .branch-hero-header {
+    padding: 50px 30px;
+  }
+
+  .branch-hero-title {
+    font-size: 3rem;
+  }
+
+  .branch-hero-description {
+    font-size: 1.1rem;
+  }
+
+  .roles-section-modern {
+    padding: 40px 30px;
+  }
+
+  .roles-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .roles-grid-modern {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .branch-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .roles-title-modern {
+    font-size: 1.5rem;
+  }
+
+  .role-card-modern {
+    padding: 24px;
+  }
 }
