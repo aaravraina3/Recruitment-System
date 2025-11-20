@@ -2,7 +2,7 @@ import React from 'react';
 import './BranchDetail.css';
 import '../pages/Dashboard.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useClerk } from '@clerk/clerk-react';
 import Button from '../components/Button';
 
 const BRANCH_DATA = {
@@ -86,6 +86,7 @@ function BranchDetail() {
   const navigate = useNavigate();
   const { branchId } = useParams();
   const { user } = useUser();
+  const { signOut } = useClerk();
   
   const branch = BRANCH_DATA[branchId];
 
@@ -129,6 +130,12 @@ function BranchDetail() {
               <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
           </div>
+          <button 
+            className="logout-button"
+            onClick={() => signOut(() => navigate('/sign-in'))}
+          >
+            Sign Out
+          </button>
         </div>
       </aside>
 

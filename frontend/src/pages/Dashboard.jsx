@@ -1,20 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import './Dashboard.css';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useAuth, useClerk } from '@clerk/clerk-react';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 import StatusTracker from '../components/StatusTracker';
+import { applicationAPI } from '../services/api';
 
 function Dashboard() {
     const { user } = useUser();
+    const { getToken } = useAuth();
+    const { signOut } = useClerk();
     const navigate = useNavigate();
 
     const [applications, setApplications] = useState([]);
+    const [loading, setLoading] = useState(true);
   
     useEffect(() => {
-      const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
-      setApplications(savedApps);
-    }, []);
+      const fetchApplications = async () => {
+        if (!user?.primaryEmailAddress?.emailAddress) return;
+        
+        try {
+          setLoading(true);
+          // Fetch from backend
+          const backendApps = await applicationAPI.getByEmail(
+            user.primaryEmailAddress.emailAddress,
+            getToken
+          );
+          
+          // Transform backend data to match frontend format
+          const transformedApps = backendApps.map((app, index) => ({
+            id: app._id || Date.now() + index,
+            role: app.role,
+            branch: app.branch,
+            branchColor: app.branchColor,
+            status: app.status,
+            submittedAt: app.submittedAt,
+            timestamps: app.timestamps,
+            isSubmitted: app.isSubmitted,
+            formData: app.formData
+          }));
+          
+          setApplications(transformedApps);
+          
+          // Also sync with localStorage for offline access
+          localStorage.setItem('my-applications', JSON.stringify(transformedApps));
+        } catch (error) {
+          console.error('Error fetching applications:', error);
+          // Fallback to localStorage if API fails
+          const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
+          setApplications(savedApps);
+        } finally {
+          setLoading(false);
+        }
+      };
+      
+      fetchApplications();
+    }, [user, getToken]);
 
     const getGreeting = () => {
         const hour = new Date().getHours();
@@ -84,6 +125,12 @@ function Dashboard() {
               <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
           </div>
+          <button 
+            className="logout-button"
+            onClick={() => signOut(() => navigate('/sign-in'))}
+          >
+            Sign Out
+          </button>
         </div>
       </aside>
 
