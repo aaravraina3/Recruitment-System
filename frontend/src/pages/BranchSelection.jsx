@@ -3,11 +3,12 @@ import './BranchSelection.css';
 import '../pages/Dashboard.css';
 import BranchCard from '../components/BranchCard';
 import { useNavigate } from 'react-router-dom';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useClerk } from '@clerk/clerk-react';
 
 function BranchSelection() {
     const navigate = useNavigate();
     const { user } = useUser();
+    const { signOut } = useClerk();
 
     const branches = [
         { id: 'software', name: 'Software', color: 'software' },
@@ -60,6 +61,12 @@ function BranchSelection() {
               <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
           </div>
+          <button 
+            className="logout-button"
+            onClick={() => signOut(() => navigate('/sign-in'))}
+          >
+            Sign Out
+          </button>
         </div>
       </aside>
 
