@@ -1,1 +1,7 @@
-"""Module: Placeholder for Generate Recruitment Portal."""\n
+# validate data
+
+def valid_email(email:str):
+    if "@northeastern.edu" in email:
+        return True
+    else:
+        return False
