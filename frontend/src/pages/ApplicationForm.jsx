@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import './ApplicationForm.css';
 import '../pages/Dashboard.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useAuth, useClerk } from '@clerk/clerk-react';
 import Button from '../components/Button';
 import Input from '../components/Input';
 import CountdownTimer from '../components/CountdownTimer';
+import { applicationAPI } from '../services/api';
 
 
 
@@ -158,6 +159,9 @@ function ApplicationForm() {
   const navigate = useNavigate();
   const { branchId, roleId } = useParams();
   const { user } = useUser();
+  const { getToken } = useAuth();
+  const { signOut } = useClerk();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   
   const roleContent = ROLE_CONTENT[roleId] || ROLE_CONTENT['swe-chief'];
   const [currentStep, setCurrentStep] = useState(1);
@@ -251,39 +255,53 @@ function ApplicationForm() {
   
   const prevStep = () => setCurrentStep(prev => Math.max(prev - 1, 1));
 
-  const handleSubmit = () => {
-    const application = {
-    id: Date.now(),
-    role: roleId?.replace(/-/g, ' '),
-    branch: branchId,
-    branchColor: roleContent.branch.toLowerCase().replace(' ', '-'),
-    status: 'submitted',
-    submittedAt: new Date().toLocaleString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
-      year: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit'
-    }),
-    timestamps: {
-      'submitted': new Date().toLocaleString('en-US', { 
-        month: 'short', 
-        day: 'numeric', 
-        year: 'numeric',
-        hour: 'numeric',
-        minute: '2-digit'
-      })
-    },
-    isSubmitted: true,
-    formData: formData
-  };
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    
+    try {
+      const application = {
+        email: user?.primaryEmailAddress?.emailAddress,
+        role: roleId?.replace(/-/g, ' '),
+        branch: branchId,
+        branchColor: roleContent.branch.toLowerCase().replace(' ', '-'),
+        status: 'submitted',
+        submittedAt: new Date().toLocaleString('en-US', { 
+          month: 'short', 
+          day: 'numeric', 
+          year: 'numeric',
+          hour: 'numeric',
+          minute: '2-digit'
+        }),
+        timestamps: {
+          'submitted': new Date().toLocaleString('en-US', { 
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit'
+          })
+        },
+        isSubmitted: true,
+        formData: formData
+      };
 
-  const existingApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
-  existingApps.push(application);
-  localStorage.setItem('my-applications', JSON.stringify(existingApps));
-  localStorage.removeItem('application-draft');
-  alert('Application submitted successfully!');
-  navigate('/my-applications');
+      // Send to backend API
+      await applicationAPI.create(application, getToken);
+      
+      // Also save to localStorage as backup
+      const existingApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
+      existingApps.push({ ...application, id: Date.now() });
+      localStorage.setItem('my-applications', JSON.stringify(existingApps));
+      localStorage.removeItem('application-draft');
+      
+      alert('Application submitted successfully!');
+      navigate('/my-applications');
+    } catch (error) {
+      console.error('Error submitting application:', error);
+      alert(`Failed to submit application: ${error.message}. Please try again.`);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   {/*Left sidebar*/}
@@ -336,6 +354,13 @@ function ApplicationForm() {
                 <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
             </div>
+            <button 
+              className="logout-button"
+              onClick={() => signOut(() => navigate('/sign-in'))}
+            >
+        
+              Sign Out
+            </button>
         </div>
         </aside>
 
@@ -690,11 +715,11 @@ function ApplicationForm() {
                   <p><strong>Resume:</strong> {formData.resume?.name}</p>
                 </div>
                 <div className="form-actions">
-                  <Button variant="secondary" onClick={prevStep}>
+                  <Button variant="secondary" onClick={prevStep} disabled={isSubmitting}>
                     ← Edit Application
                   </Button>
-                  <Button variant="primary" onClick={handleSubmit}>
-                    Submit Application ✓
+                  <Button variant="primary" onClick={handleSubmit} disabled={isSubmitting}>
+                    {isSubmitting ? 'Submitting...' : 'Submit Application ✓'}
                   </Button>
                 </div>
               </div>

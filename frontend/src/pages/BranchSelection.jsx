@@ -3,11 +3,12 @@ import './BranchSelection.css';
 import '../pages/Dashboard.css';
 import BranchCard from '../components/BranchCard';
 import { useNavigate } from 'react-router-dom';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useClerk } from '@clerk/clerk-react';
 
 function BranchSelection() {
     const navigate = useNavigate();
     const { user } = useUser();
+    const { signOut } = useClerk();
 
     const branches = [
         { id: 'software', name: 'Software', color: 'software' },
@@ -60,24 +61,44 @@ function BranchSelection() {
               <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
           </div>
+          <button 
+            className="logout-button"
+            onClick={() => signOut(() => navigate('/sign-in'))}
+          >
+            Sign Out
+          </button>
         </div>
       </aside>
 
       <main className="dashboard-main">
         <div className="branch-selection-content">
-          <div className="branch-header">
-            <h1 className="branch-page-title">Generate Branches</h1>
+          <div className="branch-hero">
+            <div className="hero-content">
+              <h1 className="hero-title">Choose Your Path</h1>
+              <p className="hero-subtitle">
+                Explore our six branches and find the perfect role to make an impact at Generate
+              </p>
+            </div>
+            <div className="hero-decoration">
+              <div className="hero-circle hero-circle-1"></div>
+              <div className="hero-circle hero-circle-2"></div>
+              <div className="hero-circle hero-circle-3"></div>
+            </div>
           </div>
 
-          <div className="branch-grid-container">
-            {branches.map(branch => (
-              <BranchCard
-                key={branch.id}
-                branch={branch.name}
-                color={branch.color}
-                onClick={() => navigate(`/branch/${branch.id}`)}
-              />
-            ))}
+          <div className="branches-section">
+            <h2 className="section-label">GENERATE BRANCHES</h2>
+            <div className="branch-grid-container">
+              {branches.map(branch => (
+                <BranchCard
+                  key={branch.id}
+                  branch={branch.name}
+                  color={branch.color}
+                  icon={branch.icon}
+                  onClick={() => navigate(`/branch/${branch.id}`)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </main>

@@ -2,19 +2,60 @@ import React from 'react';
 import './MyApplications.css';
 import './Dashboard.css';
 import { useNavigate } from 'react-router-dom';
-import { useUser, UserButton } from '@clerk/clerk-react';
+import { useUser, UserButton, useAuth, useClerk } from '@clerk/clerk-react';
 import Button from '../components/Button';
 import StatusTracker from '../components/StatusTracker';
+import { applicationAPI } from '../services/api';
 
 function MyApplications() {
   const navigate = useNavigate();
   const { user } = useUser();
+  const { getToken } = useAuth();
+  const { signOut } = useClerk();
   const [applications, setApplications] = React.useState([]);
+  const [loading, setLoading] = React.useState(true);
   
   React.useEffect(() => {
-    const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
-    setApplications(savedApps);
-  }, []);
+    const fetchApplications = async () => {
+      if (!user?.primaryEmailAddress?.emailAddress) return;
+      
+      try {
+        setLoading(true);
+        // Fetch from backend
+        const backendApps = await applicationAPI.getByEmail(
+          user.primaryEmailAddress.emailAddress,
+          getToken
+        );
+        
+        // Transform backend data to match frontend format
+        const transformedApps = backendApps.map((app, index) => ({
+          id: app._id || Date.now() + index,
+          role: app.role,
+          branch: app.branch,
+          branchColor: app.branchColor,
+          status: app.status,
+          submittedAt: app.submittedAt,
+          timestamps: app.timestamps,
+          isSubmitted: app.isSubmitted,
+          formData: app.formData
+        }));
+        
+        setApplications(transformedApps);
+        
+        // Also sync with localStorage for offline access
+        localStorage.setItem('my-applications', JSON.stringify(transformedApps));
+      } catch (error) {
+        console.error('Error fetching applications:', error);
+        // Fallback to localStorage if API fails
+        const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
+        setApplications(savedApps);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchApplications();
+  }, [user, getToken]);
 
   const hasApplications = applications.length > 0;
 
@@ -40,7 +81,7 @@ function MyApplications() {
             <span className="nav-icon">◎</span>
             Apply Now
           </button>
-          <button className="nav-item" onClick={() => navigate('/my-applications')}>
+          <button className="nav-item active" onClick={() => navigate('/my-applications')}>
             <span className="nav-icon">❐</span>
             My Active Applications
           </button>
@@ -54,50 +95,74 @@ function MyApplications() {
               <p className="user-email">{user?.primaryEmailAddress?.emailAddress}</p>
             </div>
           </div>
+          <button 
+            className="logout-button"
+            onClick={() => signOut(() => navigate('/sign-in'))}
+          >
+            Sign Out
+          </button>
         </div>
       </aside>
 
       <main className="dashboard-main">
         <div className="my-applications-content">
-          <h1 className="page-title">My Active Applications</h1>
-          <p className="page-subtitle">Track your application progress and manage submissions</p>
+          <div className="applications-hero">
+            <div className="hero-content-apps">
+              <h1 className="applications-hero-title">My Applications</h1>
+              <p className="applications-hero-subtitle">
+                Track your application progress and manage submissions
+              </p>
+            </div>
+
+            {hasApplications && (
+              <div className="applications-count-badge">
+                <span className="count-number">{applications.length}</span>
+                <span className="count-label">Active {applications.length === 1 ? 'Application' : 'Applications'}</span>
+              </div>
+            )}
+          </div>
 
           {!hasApplications ? (
-            <div className="empty-state">
-              <div className="empty-icon">📋</div>
-              <h2>No Applications Yet</h2>
-              <p>You haven't submitted any applications. Ready to get started?</p>
+            <div className="empty-state-modern">
+              <div className="empty-icon-modern">📋</div>
+              <h2 className="empty-title">No Applications Yet</h2>
+              <p className="empty-description">You haven't submitted any applications. Ready to get started?</p>
               <Button variant="primary" onClick={() => navigate('/branches')}>
                 Browse Branches
               </Button>
             </div>
           ) : (
-            <div className="applications-list">
+            <div className="applications-list-modern">
               {applications.map(app => (
-                <div key={app.id} className="application-card">
-                  <div className="app-card-header">
-                    <div className="app-title-section">
-                      <h2 className="app-role-title">{app.role}</h2>
-                      <span className={`app-branch-badge badge-${app.branchColor}`}>
+                <div key={app.id} className={`application-card-modern application-${app.branchColor}`}>
+                  <div className="app-accent-bar"></div>
+                  <div className="app-card-body">
+                  <div className="app-header-modern">
+                    <div className="app-title-group">
+                      <h2 className="app-role-title-modern">{app.role}</h2>
+                      <span className={`app-branch-pill branch-pill-${app.branchColor}`}>
                         {app.branch}
                       </span>
                     </div>
-                    <div className="app-meta">
-                      <span className="app-submitted">Submitted: {app.submittedAt}</span>
-                    </div>
+                    <div className="app-timestamp">
+                        <span className="timestamp-label">Submitted</span>
+                        <span className="timestamp-value">{app.submittedAt}</span>
+                      </div>
                   </div>
-
+                  
+                  <div className="app-status-section">
                   <StatusTracker 
                     currentStatus={app.status}
                     timestamps={app.timestamps}
                   />
+                  </div>
 
-                  <div className="app-actions">
-                    <Button variant="primary">View Details</Button>
+                  <div className="app-actions-modern">
                     {!app.isSubmitted && (
-                      <Button variant="black">Continue Application</Button>
+                      <Button variant="primary">Continue Application</Button>
                     )}
                   </div>
+                </div>
                 </div>
               ))}
             </div>
