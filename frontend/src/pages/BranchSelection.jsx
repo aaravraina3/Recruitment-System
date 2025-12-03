@@ -6,18 +6,26 @@ import { useNavigate } from 'react-router-dom';
 import { useUser, UserButton, useClerk } from '@clerk/clerk-react';
 import generateLogo from '../assets/generate-logo.png';
 
+// Import Branch Icons
+import softwareIcon from '../assets/software-gear.png';
+import hardwareIcon from '../assets/hardware-gear.png';
+import dataIcon from '../assets/data-gear.png';
+import financeIcon from '../assets/finance-gear.png';
+import marketingIcon from '../assets/marketing-gear.png';
+import communityIcon from '../assets/community-gear.png';
+
 function BranchSelection() {
     const navigate = useNavigate();
     const { user } = useUser();
     const { signOut } = useClerk();
 
     const branches = [
-        { id: 'software', name: 'Software', color: 'software' },
-        { id: 'hardware', name: 'Hardware', color: 'hardware' },
-        { id: 'data', name: 'Data', color: 'data' },
-        { id: 'finance', name: 'Finance', color: 'finance' },
-        { id: 'marketing', name: 'Marketing', color: 'marketing' },
-        { id: 'community', name: 'Community', color: 'community' }
+        { id: 'software', name: 'Software', color: 'software', icon: softwareIcon },
+        { id: 'hardware', name: 'Hardware', color: 'hardware', icon: hardwareIcon },
+        { id: 'data', name: 'Data', color: 'data', icon: dataIcon },
+        { id: 'finance', name: 'Finance', color: 'finance', icon: financeIcon },
+        { id: 'marketing', name: 'Marketing', color: 'marketing', icon: marketingIcon },
+        { id: 'community', name: 'Community', color: 'community', icon: communityIcon }
     ];
 
     return (
