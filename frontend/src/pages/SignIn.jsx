@@ -68,7 +68,7 @@ function SignIn() {
         <div className="signin-overlay">
           <div className="generate-image-container">
             <img 
-              src="/login-pic1.png" 
+              src={process.env.PUBLIC_URL + "/login-pic1.png"}
               alt="Generate Product Development Studio" 
               className="generate-image"
             />
