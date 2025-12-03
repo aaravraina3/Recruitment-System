@@ -19,6 +19,11 @@ const apiRequest = async (endpoint, options = {}, getToken) => {
     const token = await getToken();
     
     if (!token) {
+      // For public endpoints like generic chat, we might not need token, 
+      // but this wrapper assumes auth.
+      // For MVP, if no token, just return null or throw?
+      // Let's try to proceed if optional, but usually we want auth.
+      // Throwing error to ensure safety.
       throw new Error('No authentication token available');
     }
 
@@ -38,7 +43,7 @@ const apiRequest = async (endpoint, options = {}, getToken) => {
     // Handle response
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      throw new Error(errorData.error || `HTTP error! status: ${response.status}`);
+      throw new Error(errorData.detail || errorData.error || `HTTP error! status: ${response.status}`);
     }
 
     return await response.json();
@@ -48,15 +53,16 @@ const apiRequest = async (endpoint, options = {}, getToken) => {
   }
 };
 
+export const authAPI = {
+    getMe: async (getToken) => {
+        return apiRequest('/api/auth/me', { method: 'GET' }, getToken);
+    }
+};
+
 /**
  * User API endpoints
  */
 export const userAPI = {
-  /**
-   * Create a new user
-   * @param {object} userData - User data
-   * @param {function} getToken - Clerk's getToken function
-   */
   create: async (userData, getToken) => {
     return apiRequest('/api/users/create', {
       method: 'POST',
@@ -64,11 +70,6 @@ export const userAPI = {
     }, getToken);
   },
 
-  /**
-   * Get user by email
-   * @param {string} email - User email
-   * @param {function} getToken - Clerk's getToken function
-   */
   get: async (email, getToken) => {
     return apiRequest(`/api/users/get/${encodeURIComponent(email)}`, {
       method: 'GET',
@@ -80,11 +81,6 @@ export const userAPI = {
  * Application API endpoints
  */
 export const applicationAPI = {
-  /**
-   * Create a new application
-   * @param {object} applicationData - Application data
-   * @param {function} getToken - Clerk's getToken function
-   */
   create: async (applicationData, getToken) => {
     return apiRequest('/api/applications/create', {
       method: 'POST',
@@ -92,19 +88,83 @@ export const applicationAPI = {
     }, getToken);
   },
 
-  /**
-   * Get applications by email
-   * @param {string} email - User email
-   * @param {function} getToken - Clerk's getToken function
-   */
   getByEmail: async (email, getToken) => {
     return apiRequest(`/api/applications/get/${encodeURIComponent(email)}`, {
       method: 'GET',
     }, getToken);
   },
+  
+  getDetail: async (id, getToken) => {
+    return apiRequest(`/api/applications/${id}`, {
+      method: 'GET',
+    }, getToken);
+  },
+  
+  getQuestions: async (branch, role, getToken) => {
+    return apiRequest(`/api/forms/questions?branch=${encodeURIComponent(branch)}&role=${encodeURIComponent(role)}`, {
+      method: 'GET',
+    }, getToken);
+  }
+};
+
+/**
+ * Review API endpoints
+ */
+export const reviewAPI = {
+  getQueue: async (branch, getToken) => {
+    return apiRequest(`/api/review/queue/${branch}`, {
+      method: 'GET',
+    }, getToken);
+  },
+
+  claim: async (appId, getToken) => {
+    return apiRequest(`/api/review/claim/${appId}`, {
+      method: 'POST',
+    }, getToken);
+  },
+
+  submitDecision: async (appId, decisionData, getToken) => {
+    return apiRequest(`/api/review/decision/${appId}`, {
+      method: 'POST',
+      body: JSON.stringify(decisionData),
+    }, getToken);
+  },
+  
+  addNote: async (appId, note, getToken) => {
+    return apiRequest(`/api/applications/${appId}/notes`, {
+      method: 'POST',
+      body: JSON.stringify({ note }),
+    }, getToken);
+  },
+  
+  getBranchNotes: async (branch, getToken) => {
+    return apiRequest(`/api/reports/branch-notes/${branch}`, {
+      method: 'GET',
+    }, getToken);
+  }
+};
+
+/**
+ * Stats API endpoints
+ */
+export const statsAPI = {
+  getBranchStats: async (getToken) => {
+    return apiRequest('/api/stats/branches', {
+      method: 'GET',
+    }, getToken);
+  },
+  
+  getFunnelStats: async (getToken) => {
+    return apiRequest('/api/stats/funnel', {
+      method: 'GET',
+    }, getToken);
+  }
 };
 
 export default {
+  authAPI,
   userAPI,
   applicationAPI,
+  reviewAPI,
+  statsAPI
 };

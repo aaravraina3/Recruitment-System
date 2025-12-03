@@ -41,11 +41,13 @@ function Chatbot() {
   setInputMessage('');
   setIsLoading(true);
 
-  try {
-    //replace the current value for API_ENDPOINT with API url
-    const API_ENDPOINT = 'HALLLOOOO'; 
-    
-    const response = await fetch(API_ENDPOINT, {
+    try {
+      // Use relative path if proxied, or get from env. 
+      // Assuming backend runs on port 8000 and we are on 3000, we need full URL if no proxy.
+      const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+      const API_ENDPOINT = `${API_URL}/api/chat`; 
+      
+      const response = await fetch(API_ENDPOINT, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

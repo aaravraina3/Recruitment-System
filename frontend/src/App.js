@@ -8,12 +8,42 @@ import BranchSelection from './pages/BranchSelection';
 import BranchDetail from './pages/BranchDetail';
 import ApplicationForm from './pages/ApplicationForm';
 import MyApplications from './pages/MyApplications';
+import ReviewDashboard from './pages/ReviewDashboard';
+import AdminDashboard from './pages/AdminDashboard';
+import Chatbot from './components/Chatbot';
 
 
 function App() {
   return (
     <BrowserRouter>
+      <Chatbot />
       <Routes>
+        <Route 
+          path="/admin" 
+          element={
+            <>
+              <SignedIn>
+                <AdminDashboard />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
+        <Route 
+          path="/review/:branchId" 
+          element={
+            <>
+              <SignedIn>
+                <ReviewDashboard />
+              </SignedIn>
+              <SignedOut>
+                <Navigate to="/sign-in" replace />
+              </SignedOut>
+            </>
+          } 
+        />
         <Route 
           path="/sign-in" 
           element={

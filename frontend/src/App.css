@@ -1,86 +1,64 @@
+:root {
+  --generate-red: #ff4d4d;
+  --generate-orange: #ff9f43;
+  --generate-yellow: #fffa65;
+  --generate-dark: #2d3436;
+  --generate-bg: #f1f2f6;
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+body {
+  background: var(--generate-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--generate-dark);
+  overflow-x: hidden;
+}
+
 .App {
   min-height: 100vh;
-  padding: 40px 20px;
 }
 
-.container {
-  max-width:1400px;
-  margin: 0 auto;
-}
-
-h1{
-  font-size: 3rem;
-  color: var(--generate-dark);
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.subtitle {
-  font-size: 1.3rem;
-  color: #6B7280;
-  margin-bottom: 60px;
-  text-align: center;
-}
-
-.section{
-  background: white;
-  padding: 40px;
+/* Glassmorphism Utility */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-bottom: 40px;
+  box-shadow: var(--shadow-lg);
 }
 
-.section h2{
-  font-size: 1.8rem;
-  color: var(--generate-dark);
-  margin-bottom: 24px;
-  border-bottom: 3px solid var(--generate-blue);
-  padding-bottom: 12px;
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-.button-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto;
+.fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-.button-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minimax(280px, 1fr));
-  gap: 24px;
+/* Buttons */
+button {
+  transition: all 0.2s ease;
+}
+button:active {
+  transform: scale(0.95);
 }
 
-.spinner-showcase {
-  display: flex;
-  gap: 40px;
-  align-items: center;
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
-
-.branch-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);  
-  gap: 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
 }
-
-
-@media (max-width: 1024px) {
-  .branch-grid,
-  .button-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+::-webkit-scrollbar-thumb {
+  background: #ccc; 
+  border-radius: 4px;
 }
-
-@media (max-width: 640px) {
-  .branch-grid,
-  .button-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  h1 {
-    font-size: 2rem;
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa; 
 }

@@ -1,0 +1,118 @@
+.review-dashboard {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.review-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  height: calc(100vh - 150px);
+}
+
+.queue-list {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.queue-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.queue-item:hover, .queue-item.active {
+  background-color: #f0f7ff;
+}
+
+.queue-item h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.queue-item .meta {
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-details h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+}
+
+.detail-section h3 {
+  color: #444;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.detail-content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  white-space: pre-wrap;
+}
+
+.action-bar {
+  margin-top: auto;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.btn-decision {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.btn-decision:hover {
+  transform: translateY(-2px);
+}
+
+.btn-accept { background-color: #10b981; color: white; }
+.btn-interview { background-color: #3b82f6; color: white; }
+.btn-reject { background-color: #ef4444; color: white; }
+
+.empty-state {
+  text-align: center;
+  padding: 3rem;
+  color: #888;
+}
+

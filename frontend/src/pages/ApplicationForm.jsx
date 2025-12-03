@@ -165,8 +165,9 @@ function ApplicationForm() {
   
   const roleContent = ROLE_CONTENT[roleId] || ROLE_CONTENT['swe-chief'];
   const [currentStep, setCurrentStep] = useState(1);
+  const [dynamicQuestions, setDynamicQuestions] = useState([]);
+  
   const [formData, setFormData] = useState({
-
     firstName: user?.firstName || '',
     lastName: user?.lastName || '',
     preferredName: '',
@@ -182,13 +183,25 @@ function ApplicationForm() {
     referralName: '',
     organizationalOutreach: '',
     
-    timeCommitment: false,
-    whyGenerate: '',
-    changes: '',
-    vision: '',
+    // Dynamic answers will be flattened here or in a separate object
+    // For simplicity, we'll store them as 'answers' object
+    answers: {},
     resume: null,
     presentationLink: ''
   });
+
+  // Fetch Dynamic Questions
+  useEffect(() => {
+    const fetchQuestions = async () => {
+        try {
+            const questions = await applicationAPI.getQuestions(branchId, roleId, getToken);
+            setDynamicQuestions(questions);
+        } catch (error) {
+            console.error("Failed to fetch questions", error);
+        }
+    };
+    fetchQuestions();
+  }, [branchId, roleId, getToken]);
 
   useEffect(() => {
     const saveInterval = setInterval(() => {
@@ -202,7 +215,10 @@ function ApplicationForm() {
   useEffect(() => {
     const savedData = localStorage.getItem('application-draft');
     if (savedData) {
-      setFormData(JSON.parse(savedData));
+      const parsed = JSON.parse(savedData);
+      // Ensure answers object exists
+      if (!parsed.answers) parsed.answers = {};
+      setFormData(parsed);
     }
   }, []);
 
@@ -216,6 +232,16 @@ function ApplicationForm() {
       ...prev, 
       [name]: type === 'checkbox' ? checked : value 
     }));
+  };
+  
+  const handleAnswerChange = (questionId, value) => {
+      setFormData(prev => ({
+          ...prev,
+          answers: {
+              ...prev.answers,
+              [questionId]: value
+          }
+      }));
   };
 
   const handleFileChange = (e) => {
@@ -233,8 +259,14 @@ function ApplicationForm() {
                formData.graduationSemester && formData.referralSource;
       case 3:
         const needsPresentation = roleContent.interviewRequirement;
-        const baseValid = formData.timeCommitment && formData.whyGenerate && 
-                         formData.changes && formData.vision && formData.resume;
+        // Check dynamic questions required fields
+        const allQuestionsAnswered = dynamicQuestions.every(q => {
+            if (!q.required) return true;
+            if (q.type === 'checkbox') return formData.answers[q.id] === true;
+            return !!formData.answers[q.id];
+        });
+        
+        const baseValid = allQuestionsAnswered && formData.resume;
         
         if (needsPresentation) {
           return baseValid && formData.presentationLink;
@@ -282,7 +314,13 @@ function ApplicationForm() {
           })
         },
         isSubmitted: true,
-        formData: formData
+        formData: {
+            ...formData,
+            // Flatten answers for easier reading in review dashboard if needed, 
+            // or keep as 'answers' object. Review Dashboard is already accessing formData directly.
+            // We'll keep the structure consistent.
+            ...formData.answers // Spread answers to top level if review dashboard expects specific keys
+        }
       };
 
       // Send to backend API
@@ -596,8 +634,8 @@ function ApplicationForm() {
                     <label className="checkbox-label">
                       <input
                         type="checkbox"
-                        name="timeCommitment"
-                        checked={formData.timeCommitment}
+                        name="timeCommitment" // Kept for backward compat/structure
+                        checked={formData.timeCommitment} // We might need to make sure this is in dynamic questions too or separate
                         onChange={handleInputChange}
                       />
                       I understand the commitment and am certain I can make it. <span className="required">*</span>
@@ -606,8 +644,8 @@ function ApplicationForm() {
 
                   <div className="input-wrapper">
                     <label className="input-label">Resume & Written Questions <span className="required">*</span></label>
-                    <p className="field-description">These questions are an opportunity to share your story and vision for the future of Generate! This is where you share your story, ambitions, and aspirations for both yourself and the organization.</p>
-                    <p className="field-note">Please customize your resume to match the unique responsibilities and qualifications required for this role. Then, attach your resume (PDF only).</p>
+                    <p className="field-description">These questions are an opportunity to share your story and vision for the future of Generate!</p>
+                    <p className="field-note">Please attach your resume (PDF only).</p>
                     <input
                       type="file"
                       accept=".pdf"
@@ -620,17 +658,33 @@ function ApplicationForm() {
                     )}
                   </div>
 
-                  <div className="input-wrapper">
-                    <label className="input-label">If you have been in Generate before, please describe what Generate has meant to you. If you haven't been in Generate, please elaborate on how your professional and/or extracurricular experiences have shaped you. <span className="required">*</span></label>
-                    <textarea
-                      name="whyGenerate"
-                      value={formData.whyGenerate}
-                      onChange={handleInputChange}
-                      className="input-field textarea"
-                      rows="6"
-                      required
-                    />
-                  </div>
+                  {/* Dynamic Questions Rendered Here */}
+                  {dynamicQuestions.map(q => (
+                    <div className="input-wrapper" key={q.id}>
+                        {q.type === 'checkbox' ? (
+                            <label className="checkbox-label">
+                                <input 
+                                    type="checkbox"
+                                    checked={!!formData.answers[q.id]}
+                                    onChange={(e) => handleAnswerChange(q.id, e.target.checked)}
+                                />
+                                {q.label} {q.required && <span className="required">*</span>}
+                            </label>
+                        ) : (
+                            <>
+                                <label className="input-label">{q.label} {q.required && <span className="required">*</span>}</label>
+                                <textarea
+                                    value={formData.answers[q.id] || ''}
+                                    onChange={(e) => handleAnswerChange(q.id, e.target.value)}
+                                    className="input-field textarea"
+                                    rows={q.rows || 4}
+                                    required={q.required}
+                                />
+                            </>
+                        )}
+                    </div>
+                  ))}
+
 
                   {roleContent.interviewRequirement && (
                     <div className="interview-requirement">
@@ -658,30 +712,6 @@ function ApplicationForm() {
                     </div>
                   )}
 
-                  <div className="input-wrapper">
-                    <label className="input-label">In concise words: what changes or improvements would you like to bring to the branch or position? <span className="required">*</span></label>
-                    <textarea
-                      name="changes"
-                      value={formData.changes}
-                      onChange={handleInputChange}
-                      className="input-field textarea"
-                      rows="6"
-                      required
-                    />
-                    <p className="warning-note">⚠️ If selected for an interview, please be prepared to elaborate on the previous question in detail.</p>
-                  </div>
-
-                  <div className="input-wrapper">
-                    <label className="input-label">What is your vision for your respective subbranch? How do you define success? <span className="required">*</span></label>
-                    <textarea
-                      name="vision"
-                      value={formData.vision}
-                      onChange={handleInputChange}
-                      className="input-field textarea"
-                      rows="6"
-                      required
-                    />
-                  </div>
                 </div>
                 <div className="form-actions">
                   <Button variant="secondary" onClick={prevStep}>
@@ -711,8 +741,17 @@ function ApplicationForm() {
                 </div>
                 <div className="review-section">
                   <h3>Application</h3>
-                  <p><strong>Position:</strong> {formData.chiefPosition}</p>
+                  <p><strong>Position:</strong> {roleContent.title}</p>
                   <p><strong>Resume:</strong> {formData.resume?.name}</p>
+                  {/* Display Dynamic Answers in Review */}
+                  {dynamicQuestions.map(q => (
+                     <div key={q.id} style={{marginTop: '10px'}}>
+                        <strong>{q.label}</strong>
+                        <p style={{whiteSpace: 'pre-wrap', background: '#f9f9f9', padding: '8px', borderRadius: '4px'}}>
+                            {q.type === 'checkbox' ? (formData.answers[q.id] ? 'Yes' : 'No') : (formData.answers[q.id] || '-')}
+                        </p>
+                     </div>
+                  ))}
                 </div>
                 <div className="form-actions">
                   <Button variant="secondary" onClick={prevStep} disabled={isSubmitting}>

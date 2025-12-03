@@ -4,7 +4,8 @@ import { useUser, UserButton, useAuth, useClerk } from '@clerk/clerk-react';
 import Button from '../components/Button';
 import { useNavigate } from 'react-router-dom';
 import StatusTracker from '../components/StatusTracker';
-import { applicationAPI } from '../services/api';
+import { applicationAPI, authAPI } from '../services/api';
+import { motion } from 'framer-motion';
 
 function Dashboard() {
     const { user } = useUser();
@@ -14,19 +15,23 @@ function Dashboard() {
 
     const [applications, setApplications] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [staffInfo, setStaffInfo] = useState(null);
   
     useEffect(() => {
-      const fetchApplications = async () => {
+      const fetchData = async () => {
         if (!user?.primaryEmailAddress?.emailAddress) return;
         
         try {
           setLoading(true);
-          // Fetch from backend
-          const backendApps = await applicationAPI.getByEmail(
-            user.primaryEmailAddress.emailAddress,
-            getToken
-          );
           
+          // Parallel fetch: Apps and Auth Info
+          const [backendApps, authInfo] = await Promise.all([
+            applicationAPI.getByEmail(user.primaryEmailAddress.emailAddress, getToken).catch(e => []),
+            authAPI.getMe(getToken).catch(e => null)
+          ]);
+
+          setStaffInfo(authInfo);
+
           // Transform backend data to match frontend format
           const transformedApps = backendApps.map((app, index) => ({
             id: app._id || Date.now() + index,
@@ -41,12 +46,10 @@ function Dashboard() {
           }));
           
           setApplications(transformedApps);
-          
-          // Also sync with localStorage for offline access
           localStorage.setItem('my-applications', JSON.stringify(transformedApps));
+          
         } catch (error) {
-          console.error('Error fetching applications:', error);
-          // Fallback to localStorage if API fails
+          console.error('Error fetching dashboard data:', error);
           const savedApps = JSON.parse(localStorage.getItem('my-applications') || '[]');
           setApplications(savedApps);
         } finally {
@@ -54,7 +57,7 @@ function Dashboard() {
         }
       };
       
-      fetchApplications();
+      fetchData();
     }, [user, getToken]);
 
     const getGreeting = () => {
@@ -109,6 +112,36 @@ function Dashboard() {
             <span className="nav-icon">❐</span>
             My Active Applications
           </button>
+          
+          {/* Conditionally Render Review Button */}
+          {staffInfo?.authorized && (
+             <>
+             <button 
+                className="nav-item special-nav-item" 
+                onClick={() => {
+                    const targetBranch = (staffInfo.branch === 'Executive') ? 'software' : (staffInfo.branch || 'software');
+                    navigate(`/review/${targetBranch}`);
+                }}
+                style={{ marginTop: '20px', borderTop: '1px solid #eee', paddingTop: '20px' }}
+             >
+                <span className="nav-icon">⚖️</span>
+                Review Queue
+                <span className="role-badge">{staffInfo.role}</span>
+             </button>
+             
+             {/* Admin Panel Link for Executives */}
+             {staffInfo.branch === 'Executive' && (
+                 <button 
+                    className="nav-item"
+                    onClick={() => navigate('/admin')}
+                    style={{color: '#EF4444'}}
+                 >
+                    <span className="nav-icon">🛡️</span>
+                    Admin Panel
+                 </button>
+             )}
+             </>
+          )}
         </nav>
 
         <div className="sidebar-footer">
@@ -134,11 +167,23 @@ function Dashboard() {
         </div>
       </aside>
 
-      <main className="dashboard-main">
+      <motion.main 
+        className="dashboard-main"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="welcome-banner">
           <div className="welcome-content">
             <p className="welcome-subtitle">HEY {user?.firstName?.toUpperCase()},</p>
-            <h1 className="welcome-title">{getGreeting()}!</h1>
+            <motion.h1 
+                className="welcome-title"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.2 }}
+            >
+                {getGreeting()}!
+            </motion.h1>
             <p className="welcome-description">
               Welcome back to Generate Recruitment Portal
             </p>
@@ -152,29 +197,41 @@ function Dashboard() {
 
         <div className="dashboard-content">
           <div className="stats-grid">
-            <div className="stat-card stat-card-gradient-blue">
+            <motion.div 
+                className="stat-card stat-card-gradient-blue"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="stat-icon">📝</div>
               <div className="stat-info">
                 <p className="stat-label">Total Applications</p>
                 <h3 className="stat-value">{stats.total}</h3>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="stat-card stat-card-gradient-purple">
+            <motion.div 
+                className="stat-card stat-card-gradient-purple"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="stat-icon">⏱</div>
               <div className="stat-info">
                 <p className="stat-label">Under Review</p>
                 <h3 className="stat-value">{stats.underReview}</h3>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="stat-card stat-card-gradient-green">
+            <motion.div 
+                className="stat-card stat-card-gradient-green"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
+            >
               <div className="stat-icon">📅</div>
               <div className="stat-info">
                 <p className="stat-label">Interviews Scheduled</p>
                 <h3 className="stat-value">{stats.interview}</h3>
               </div>
-            </div>
+            </motion.div>
           </div>
 
           <div className="two-column-grid">
@@ -198,6 +255,15 @@ function Dashboard() {
                     <p className="info-value">{user?.primaryEmailAddress?.emailAddress}</p>
                   </div>
                 </div>
+                {staffInfo?.authorized && (
+                    <div className="info-item staff-status">
+                        <div className="info-icon">🛡️</div>
+                        <div className="info-details">
+                            <p className="info-label">Staff Access</p>
+                            <p className="info-value">{staffInfo.role} ({staffInfo.branch})</p>
+                        </div>
+                    </div>
+                )}
               </div>
             </div>
 
@@ -234,7 +300,7 @@ function Dashboard() {
                               <span className="applied-date">
                                 Applied {new Date(app.timestamps?.submitted).toLocaleDateString('en-US', { 
                                   month: 'short', 
-                                  day: 'numeric',
+                                  day: 'numeric', 
                                   year: 'numeric'
                                 })}
                               </span>
@@ -304,55 +370,10 @@ function Dashboard() {
                   </div>
                 </div>
               </div>
-
-              <div className="timeline-item">
-                <div className="timeline-marker marker-calendar"></div>
-                <div className="timeline-content">
-                  <div className="timeline-date">
-                    <span className="date-month">NOV</span>
-                    <span className="date-day">30</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h4 className="timeline-title">General Applications Close</h4>
-                    <p className="timeline-description">11:59 PM EST</p>
-                    <span className="timeline-badge badge-info">
-                      {getDaysUntil('2025-11-30')} days left
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="timeline-item">
-                <div className="timeline-marker marker-interview"></div>
-                <div className="timeline-content">
-                  <div className="timeline-date">
-                    <span className="date-month">DEC</span>
-                    <span className="date-day">2-6</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h4 className="timeline-title">Interviews Begin</h4>
-                    <p className="timeline-description">Stay tuned for interview invites</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="timeline-item">
-                <div className="timeline-marker marker-success"></div>
-                <div className="timeline-content">
-                  <div className="timeline-date">
-                    <span className="date-month">DEC</span>
-                    <span className="date-day">10</span>
-                  </div>
-                  <div className="timeline-info">
-                    <h4 className="timeline-title">Decisions Released</h4>
-                    <p className="timeline-description">Final decisions announced</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
-      </main>
+      </motion.main>
     </div>
   );
 }

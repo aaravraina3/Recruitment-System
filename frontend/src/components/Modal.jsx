@@ -1,7 +1,7 @@
 import React from 'react';
 import './Modal.css';
 
-function Modal ({ isOpen, onClose, title, childre}) {
+function Modal ({ isOpen, onClose, title, children}) {
     if(!isOpen) return null;
 
     return(

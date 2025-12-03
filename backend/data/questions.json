@@ -1,0 +1,74 @@
+{
+  "default": [
+    {
+      "id": "whyGenerate",
+      "type": "textarea",
+      "label": "Why do you want to join Generate?",
+      "required": true,
+      "rows": 4
+    },
+    {
+      "id": "commitment",
+      "type": "checkbox", 
+      "label": "I understand the time commitment (10-15 hours/week).",
+      "required": true
+    }
+  ],
+  "branches": {
+    "Data": {
+      "default": [
+        {
+          "id": "dataExp",
+          "type": "textarea",
+          "label": "Describe your experience with Python, SQL, and Data Science libraries.",
+          "required": true
+        }
+      ],
+      "roles": {
+        "Chief": [
+          {
+            "id": "leadership",
+            "type": "textarea",
+            "label": "Describe a time you led a technical team through a challenge.",
+            "required": true
+          },
+          {
+            "id": "vision",
+            "type": "textarea",
+            "label": "What is your vision for the Data Branch?",
+            "required": true
+          }
+        ],
+        "Lead": [
+          {
+            "id": "projectMgmt",
+            "type": "textarea",
+            "label": "How do you handle project scoping and deadlines?",
+            "required": true
+          }
+        ]
+      }
+    },
+    "Software": {
+      "default": [
+         {
+          "id": "stack",
+          "type": "textarea",
+          "label": "What is your preferred tech stack and why?",
+          "required": true
+         }
+      ],
+      "roles": {
+         "Chief": [
+            {
+              "id": "vision",
+              "type": "textarea",
+              "label": "How would you improve the Software engineering culture?",
+              "required": true
+            }
+         ]
+      }
+    }
+  }
+}
+
