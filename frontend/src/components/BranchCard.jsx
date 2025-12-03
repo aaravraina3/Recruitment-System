@@ -13,7 +13,7 @@ function BranchCard({branch, color, icon, onClick}) {
           className={`branch-icon branch-icon-${color}`}
         >
          <img 
-            src={`/${color}-gear.png`}
+            src={icon}
             alt={`${branch} gear icon`}
             className="branch-gear-img"
           />
