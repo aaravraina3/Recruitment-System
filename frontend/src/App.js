@@ -15,7 +15,7 @@ import Chatbot from './components/Chatbot';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Recruitment-System">
       <Chatbot />
       <Routes>
         <Route 
