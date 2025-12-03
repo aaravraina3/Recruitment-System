@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { SignedIn, SignedOut } from '@clerk/clerk-react';
 import SignIn from './pages/SignIn';
 import Dashboard from './pages/Dashboard';
@@ -15,7 +15,7 @@ import Chatbot from './components/Chatbot';
 
 function App() {
   return (
-    <BrowserRouter basename="/Recruitment-System">
+    <HashRouter>
       <Chatbot />
       <Routes>
         <Route 
@@ -128,7 +128,7 @@ function App() {
           element={<Navigate to="/sign-in" replace />} 
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

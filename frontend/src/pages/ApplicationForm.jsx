@@ -349,7 +349,7 @@ function ApplicationForm() {
         <div className="sidebar-header" onClick={() => navigate('/dashboard')}>
           <div className="logo-container">
             <img 
-                src="/generate-logo.png" 
+                src={process.env.PUBLIC_URL + "/generate-logo.png"}
                 alt="Generate Logo" 
                 className="generate-logo-img"
             />

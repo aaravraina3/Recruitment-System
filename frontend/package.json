@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/Recruitment-System",
+  "homepage": "https://aaravraina3.github.io/Recruitment-System",
   "dependencies": {
     "@clerk/clerk-react": "^5.53.7",
     "@testing-library/dom": "^10.4.1",
