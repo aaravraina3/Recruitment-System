@@ -54,8 +54,9 @@ function SignIn() {
           </p>
           
           <ClerkSignIn 
-            fallbackRedirectUrl="/dashboard"
-            signUpFallbackRedirectUrl="/dashboard"
+            fallbackRedirectUrl="/Recruitment-System/#/dashboard"
+            signUpFallbackRedirectUrl="/Recruitment-System/#/dashboard"
+            forceRedirectUrl="/Recruitment-System/#/dashboard"
             appearance={{
               elements: {
                 footerAction: { display: "none" },
