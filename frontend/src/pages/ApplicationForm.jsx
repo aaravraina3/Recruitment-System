@@ -7,6 +7,7 @@ import Button from '../components/Button';
 import Input from '../components/Input';
 import CountdownTimer from '../components/CountdownTimer';
 import { applicationAPI } from '../services/api';
+import generateLogo from '../assets/generate-logo.png';
 
 
 
@@ -349,7 +350,7 @@ function ApplicationForm() {
         <div className="sidebar-header" onClick={() => navigate('/dashboard')}>
           <div className="logo-container">
             <img 
-                src={process.env.PUBLIC_URL + "/generate-logo.png"}
+                src={generateLogo}
                 alt="Generate Logo" 
                 className="generate-logo-img"
             />

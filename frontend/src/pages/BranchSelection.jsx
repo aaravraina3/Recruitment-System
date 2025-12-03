@@ -4,6 +4,7 @@ import '../pages/Dashboard.css';
 import BranchCard from '../components/BranchCard';
 import { useNavigate } from 'react-router-dom';
 import { useUser, UserButton, useClerk } from '@clerk/clerk-react';
+import generateLogo from '../assets/generate-logo.png';
 
 function BranchSelection() {
     const navigate = useNavigate();
@@ -25,7 +26,7 @@ function BranchSelection() {
        <div className="sidebar-header" onClick={() => navigate('/dashboard')}>
           <div className="logo-container">
             <img 
-                src={process.env.PUBLIC_URL + "/generate-logo.png"}
+                src={generateLogo}
                 alt="Generate Logo" 
                 className="generate-logo-img"
             />

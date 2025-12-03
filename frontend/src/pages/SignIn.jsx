@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './SignIn.css';
 import { SignIn as ClerkSignIn } from '@clerk/clerk-react';
+import loginPic from '../assets/login-pic1.png';
 
 function SignIn() {
     
@@ -70,7 +71,7 @@ function SignIn() {
         <div className="signin-overlay">
           <div className="generate-image-container">
             <img 
-              src={process.env.PUBLIC_URL + "/login-pic1.png"}
+              src={loginPic}
               alt="Generate Product Development Studio" 
               className="generate-image"
             />
