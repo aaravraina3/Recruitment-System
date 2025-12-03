@@ -53,14 +53,15 @@ function SignIn() {
             Sign in to Generate's Recruitment Portal using your Northeastern credentials.
           </p>
           
-          <ClerkSignIn fallbackSignUp
-          appearance={{
-    elements: {
-      footerAction: {
-        display: "none",
-      },
-    },
-  }} />
+          <ClerkSignIn 
+            fallbackRedirectUrl="/dashboard"
+            signUpFallbackRedirectUrl="/dashboard"
+            appearance={{
+              elements: {
+                footerAction: { display: "none" },
+              },
+            }} 
+          />
         </div>
       </div>
 
