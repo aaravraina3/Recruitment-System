@@ -1,1178 +1,3054 @@
 [
   {
-    "name": "Aarav Raina",
-    "email": "aaravraina2024@gmail.com",
-    "branch": "Community",
-    "role": "Chief of Internal Insights",
-    "level": "Chief"
-  },
-  {
-    "name": "Aarzu Choudhary",
-    "email": "aarzu.choudhary@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Jose Avila",
+    "email": "jose.avila@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "David Yu",
-    "email": "david.yu@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Emma Shek",
+    "email": "emma.shek@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Grace Ferretti",
-    "email": "grace.ferretti@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Jakob Philippe",
+    "email": "jakob.philippe@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Jas Yu",
-    "email": "jas.yu@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Ania Misiorek",
+    "email": "ania.misiorek@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Neha Jha",
-    "email": "neha.jha@northeastern.edu",
-    "branch": "Community",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Ravneet Kaur",
-    "email": "ravneet.kaur@northeastern.edu",
-    "branch": "Community",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Cate Morath",
-    "email": "cate.morath@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Narayan Sharma",
+    "email": "narayan.sharma@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Chrystalle Perez",
-    "email": "chrystalle.perez@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Sunny Huang",
+    "email": "sunny.huang@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Gifti Aga",
-    "email": "gifti.aga@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Jason Widjaja",
+    "email": "jason.widjaja@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Naesha Patel",
-    "email": "naesha.patel@northeastern.edu",
-    "branch": "Community",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Natalie Kwong",
-    "email": "natalie.kwong@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
+    "name": "Jessica Healey",
+    "email": "jessica.healey@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Aditya Mogli",
-    "email": "aditya.mogli@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Chelsea Kwan",
-    "email": "chelsea.kwan@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Arav Budhiraja",
-    "email": "arav.budhiraja@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Jocelyn Law",
-    "email": "jocelyn.law@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Nisha Vernaker",
-    "email": "nisha.vernaker@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Ruben Noroian",
-    "email": "ruben.noroian@northeastern.edu",
-    "branch": "Community",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Susan Kim",
-    "email": "susan.kim@northeastern.edu",
-    "branch": "Community",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Alex Saidov",
-    "email": "alex.saidov@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Andrew Rettig",
-    "email": "andrew.rettig@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Arshia Mathur",
-    "email": "arshia.mathur@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Diya Kadakia",
-    "email": "diya.kadakia@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Eitan Bernfeld",
-    "email": "eitan.bernfeld@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Rishi Kamtam",
-    "email": "rishi.kamtam@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Sonal Gupta",
-    "email": "sonal.gupta@northeastern.edu",
-    "branch": "Data",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Tanisha Joshi",
-    "email": "tanisha.joshi@northeastern.edu",
-    "branch": "Data",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Haley Martin",
-    "email": "haley.martin@northeastern.edu",
-    "branch": "Data",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Deekshita Madhalam",
-    "email": "deekshita.madhalam@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Ellie Meltzer",
-    "email": "ellie.meltzer@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Gokul Ramanan",
-    "email": "gokul.ramanan@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Gordon Bie",
-    "email": "gordon.bie@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Jerome Rodrigo",
-    "email": "jerome.rodrigo@northeastern.edu",
-    "branch": "Data",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Kaydence Lin",
-    "email": "kaydence.lin@northeastern.edu",
-    "branch": "Data",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Melina Yang",
-    "email": "melina.yang@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Nandeenee Singh",
-    "email": "nandeenee.singh@northeastern.edu",
-    "branch": "Data",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Vichu Selvaraju",
-    "email": "vichu.selvaraju@northeastern.edu",
-    "branch": "Data",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Benjamin Marler",
-    "email": "benjamin.marler@northeastern.edu",
-    "branch": "Data",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Mika Nguyen",
-    "email": "mika.nguyen@northeastern.edu",
-    "branch": "Finance",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Vedika Donthi",
-    "email": "vedika.donthi@northeastern.edu",
-    "branch": "Finance",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Eli Zislis",
-    "email": "eli.zislis@northeastern.edu",
-    "branch": "Generate",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Andrew Goldstein",
-    "email": "andrew.goldstein@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ID",
-    "level": "Member"
-  },
-  {
-    "name": "Austin Fasnacht",
-    "email": "austin.fasnacht@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Bryan Pitts",
-    "email": "bryan.pitts@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Charles Kim",
-    "email": "charles.kim@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Deven Patel",
-    "email": "deven.patel@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Hannah Lai",
-    "email": "hannah.lai@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Julia Faubus",
-    "email": "julia.faubus@northeastern.edu",
-    "branch": "Hardware",
-    "role": "FWE",
-    "level": "Member"
-  },
-  {
-    "name": "Lili Palomino",
-    "email": "lili.palomino@northeastern.edu",
-    "branch": "Hardware",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Mateo Wu Chen",
-    "email": "mateo.wu.chen@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Nick Spaz",
-    "email": "nick.spaz@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Niki Manolis",
-    "email": "niki.manolis@northeastern.edu",
-    "branch": "Hardware",
-    "role": "EE TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Sachin Patel",
-    "email": "sachin.patel@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Tyrus Kamenitzer",
-    "email": "tyrus.kamenitzer@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Will Jappe",
-    "email": "will.jappe@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
+    "name": "Sean Suleski",
+    "email": "sean.suleski@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
     "name": "Amberley Martinez",
-    "email": "amberley.martinez@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME/ID Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Brendan Coggins",
-    "email": "brendan.coggins@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME/ID Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Charlie Amante",
-    "email": "charlie.amante@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Ellie Grube",
-    "email": "ellie.grube@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME/ID Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Jiamei Goodwin",
-    "email": "jiamei.goodwin@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME/ID Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Rohi Ahn",
-    "email": "rohi.ahn@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Vasishta Malisetty",
-    "email": "vasishta.malisetty@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Will Fox",
-    "email": "will.fox@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Ethan Kjersgard",
-    "email": "ethan.kjersgard@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Aidan Kane",
-    "email": "aidan.kane@northeastern.edu",
-    "branch": "Hardware",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Alisa Nance",
-    "email": "alisa.nance@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Andrew Amante",
-    "email": "andrew.amante@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
+    "email": "amberley.martinez@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Ava Gami",
-    "email": "ava.gami@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
+    "name": "Sunny Huang",
+    "email": "sunny.huang@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Ilona Beacom-Domotor",
-    "email": "ilona.beacom-domotor@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
+    "name": "Justin Roffman",
+    "email": "justin.roffman@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Jack Sweeney",
-    "email": "jack.sweeney@northeastern.edu",
-    "branch": "Hardware",
-    "role": "FWE",
+    "name": "Sofie Teplitskiy",
+    "email": "sofie.teplitskiy@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Jen Lavallee",
-    "email": "jen.lavallee@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
+    "name": "Sean Suleski",
+    "email": "sean.suleski@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Kimberly Tso",
-    "email": "kimberly.tso@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
+    "name": "Alder Whiteford",
+    "email": "alder.whiteford@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "L. Von",
-    "email": "l.von@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
+    "name": "Logan Buchalter",
+    "email": "logan.buchalter@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Laura Tomarossi Teixeira",
-    "email": "laura.tomarossi.teixeira@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
+    "name": "Helen Cai",
+    "email": "helen.cai@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Matt Marsicano",
-    "email": "matt.marsicano@northeastern.edu",
-    "branch": "Hardware",
-    "role": "EE TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Nate Winslow",
-    "email": "nate.winslow@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Will Rosen",
-    "email": "will.rosen@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Bella Valentino",
-    "email": "bella.valentino@northeastern.edu",
-    "branch": "Hardware",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Cat Menten",
-    "email": "cat.menten@northeastern.edu",
-    "branch": "Hardware",
-    "role": "EE TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Chris Molinari",
-    "email": "chris.molinari@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Christopher Lutchman",
-    "email": "christopher.lutchman@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Ellie Stull",
-    "email": "ellie.stull@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Fahia Bashar",
-    "email": "fahia.bashar@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Henry Gao",
-    "email": "henry.gao@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Jillian Ryan",
-    "email": "jillian.ryan@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ID",
-    "level": "Member"
-  },
-  {
-    "name": "Joshua Song",
-    "email": "joshua.song@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Kate Mathis",
-    "email": "kate.mathis@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Michael Brennan",
-    "email": "michael.brennan@northeastern.edu",
-    "branch": "Hardware",
-    "role": "FWE",
-    "level": "Member"
-  },
-  {
-    "name": "Samantha Ko",
-    "email": "samantha.ko@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Sylvain McGovern",
-    "email": "sylvain.mcgovern@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Leo Chen",
-    "email": "leo.chen@northeastern.edu",
-    "branch": "Hardware",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Charlene Lam",
-    "email": "charlene.lam@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ID",
-    "level": "Member"
-  },
-  {
-    "name": "Chitraksha Kashyap",
-    "email": "chitraksha.kashyap@northeastern.edu",
-    "branch": "Hardware",
-    "role": "FWE",
-    "level": "Member"
-  },
-  {
-    "name": "Ireh Hong",
-    "email": "ireh.hong@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Jeffrey Burt",
-    "email": "jeffrey.burt@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Luca Poulos",
-    "email": "luca.poulos@northeastern.edu",
-    "branch": "Hardware",
-    "role": "EE TL",
-    "level": "Lead"
-  },
-  {
-    "name": "M. Marchev",
-    "email": "m.marchev@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "M. Miller",
-    "email": "m.miller@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Michelle Montenegro",
-    "email": "michelle.montenegro@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Mihir Narayan",
-    "email": "mihir.narayan@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME TL",
-    "level": "Lead"
-  },
-  {
-    "name": "Nola Hallemeier",
-    "email": "nola.hallemeier@northeastern.edu",
-    "branch": "Hardware",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Sadeel Alhazim",
-    "email": "sadeel.alhazim@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Sahithi Gollakota",
-    "email": "sahithi.gollakota@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ECE",
-    "level": "Member"
-  },
-  {
-    "name": "Wisena Joseph",
-    "email": "wisena.joseph@northeastern.edu",
-    "branch": "Hardware",
-    "role": "ME",
-    "level": "Member"
-  },
-  {
-    "name": "Ana Costa",
-    "email": "ana.costa@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Devina Mogha",
-    "email": "devina.mogha@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Julian Wu",
-    "email": "julian.wu@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Member",
-    "level": "Member"
-  },
-  {
-    "name": "Aayat Bhatia",
-    "email": "aayat.bhatia@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Director",
-    "level": "Director"
-  },
-  {
-    "name": "Sneha Sridhar",
-    "email": "sneha.sridhar@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Prabhav Gupta",
-    "email": "prabhav.gupta@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Amy Shankar",
-    "email": "amy.shankar@northeastern.edu",
-    "branch": "Marketing",
-    "role": "Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Grace Uecker",
-    "email": "grace.uecker@northeastern.edu",
-    "branch": "Software",
-    "role": "Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Zachary Croft",
-    "email": "zachary.croft@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Katherine Zhang",
-    "email": "katherine.zhang@northeastern.edu",
-    "branch": "Software",
-    "role": "Design Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Ava Rietz",
-    "email": "ava.rietz@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
-    "level": "Member"
-  },
-  {
-    "name": "Emily Chooi",
-    "email": "emily.chooi@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
-    "level": "Member"
-  },
-  {
-    "name": "Joyce Lee",
-    "email": "joyce.lee@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
-    "level": "Member"
-  },
-  {
-    "name": "Rowen Latif",
-    "email": "rowen.latif@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
-    "level": "Member"
-  },
-  {
-    "name": "Abby Stevenson",
-    "email": "abby.stevenson@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
-    "level": "Member"
-  },
-  {
-    "name": "Amogh",
-    "email": "amogh@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
-    "level": "Member"
-  },
-  {
-    "name": "Eric Kitagawa",
-    "email": "eric.kitagawa@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
-    "level": "Member"
-  },
-  {
-    "name": "Isabella Pozzi",
-    "email": "isabella.pozzi@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
-    "level": "Member"
-  },
-  {
-    "name": "Tony Giech",
-    "email": "tony.giech@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
-    "level": "Member"
-  },
-  {
-    "name": "Kaamil Thobani",
-    "email": "kaamil.thobani@northeastern.edu",
-    "branch": "Software",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Alison Ryan",
-    "email": "alison.ryan@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Dylan Anctil",
-    "email": "dylan.anctil@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Stone Liu",
-    "email": "stone.liu@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Chief",
-    "level": "Chief"
-  },
-  {
-    "name": "Adam Ma",
-    "email": "adam.ma@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Afnan Tuffaha",
-    "email": "afnan.tuffaha@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Jakob Philippe",
+    "email": "jakob.philippe@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
     "name": "Ansh Patel",
-    "email": "ansh.patel@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "email": "ansh.patel@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Daniel Vesga",
-    "email": "daniel.vesga@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Andrew Caplan",
+    "email": "andrew.caplan@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Isha Madhusudhan",
-    "email": "isha.madhusudhan@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Dessy Dusichka",
+    "email": "dessy.dusichka@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Joshua Sharma",
-    "email": "joshua.sharma@northeastern.edu",
-    "branch": "Software",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Kalene Peterson",
-    "email": "kalene.peterson@northeastern.edu",
-    "branch": "Software",
-    "role": "Design Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Lydia Lutake",
-    "email": "lydia.lutake@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Frank Anderson",
+    "email": "frank.anderson@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Neha Chandran",
-    "email": "neha.chandran@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Neha Jain",
+    "email": "neha.jain@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Qihong Wu",
-    "email": "qihong.wu@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Josephine Dermond",
+    "email": "josephine.dermond@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Rachel Ma",
-    "email": "rachel.ma@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Maggie Tong",
+    "email": "maggie.tong@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Sierra Welsch",
-    "email": "sierra.welsch@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Victoria Chin",
-    "email": "victoria.chin@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "David Oduneye",
+    "email": "david.oduneye@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Abby Reese",
-    "email": "abby.reese@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Danny Rollo",
+    "email": "danny.rollo@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Cindy Lin",
-    "email": "cindy.lin@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Sunny Huang",
+    "email": "sunny.huang@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Isaac Polite",
-    "email": "isaac.polite@northeastern.edu",
-    "branch": "Software",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Jack Toncelli",
-    "email": "jack.toncelli@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Joshua Torre",
-    "email": "joshua.torre@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Akshay Dupuguntla",
+    "email": "akshay.dupuguntla@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Kyra Holmes",
-    "email": "kyra.holmes@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Amanda Fong",
+    "email": "amanda.fong@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Manuel Torres",
-    "email": "manuel.torres@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Linwood Blaisdell",
+    "email": "linwood.blaisdell@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Nour",
-    "email": "nour@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Sam Yip",
+    "email": "sam.yip@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Tara Standard",
-    "email": "tara.standard@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Kevin McGuire",
+    "email": "kevin.mcguire@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Thomas Young",
-    "email": "thomas.young@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Satya Sowri Sampath Korturti",
+    "email": "satya.korturti@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Traci Lu",
-    "email": "traci.lu@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Logan Buchalter",
+    "email": "logan.buchalter@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Zahra Wibisana",
-    "email": "zahra.wibisana@northeastern.edu",
-    "branch": "Software",
-    "role": "Design Lead",
-    "level": "Lead"
+    "name": "Sam Yip",
+    "email": "sam.yip@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
   },
   {
-    "name": "Zainab Imadulla",
-    "email": "zainab.imadulla@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
+    "name": "Olivia Sedarski",
+    "email": "olivia.sedarski@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
   },
   {
-    "name": "Alice Lee",
-    "email": "alice.lee@northeastern.edu",
-    "branch": "Software",
-    "role": "Product Chief",
-    "level": "Chief"
+    "name": "Josh Batra",
+    "email": "josh.batra@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
   },
   {
-    "name": "Beak Ray",
-    "email": "beak.ray@northeastern.edu",
-    "branch": "Software",
-    "role": "Director",
-    "level": "Director"
+    "name": "Erin Furey",
+    "email": "erin.furey@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
   },
   {
-    "name": "Aahil Nishad",
-    "email": "aahil.nishad@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "David Oduneye",
+    "email": "david.oduneye@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "David Oduneye",
+    "email": "david.oduneye@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adharsh Kandula",
+    "email": "adharsh.kandula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Justin Roffman",
+    "email": "justin.roffman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chirag Chadha",
+    "email": "chirag.chadha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dessy Dusichka",
+    "email": "dessy.dusichka@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kevin McGuire",
+    "email": "kevin.mcguire@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jonathan Chen",
+    "email": "jonathan.chen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jessica Healey",
+    "email": "jessica.healey@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eli Wiel",
+    "email": "eli.wiel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jakob Philippe",
+    "email": "jakob.philippe@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Caitlin Flynn",
+    "email": "caitlin.flynn@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Gili Fang",
+    "email": "gili.fang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nicholas Scaperdas",
+    "email": "nicholas.scaperdas@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adharsh Kandula",
+    "email": "adharsh.kandula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Danny Rollo",
+    "email": "danny.rollo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Akshay Dupuguntla",
+    "email": "akshay.dupuguntla@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Allison Xu",
+    "email": "allison.xu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alder Whiteford",
+    "email": "alder.whiteford@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "David Oduneye",
+    "email": "david.oduneye@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alex Schulz",
+    "email": "alex.schulz@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Anna Birge",
+    "email": "anna.birge@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tristan  Phan",
+    "email": "tristan.phan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adharsh Kandula",
+    "email": "adharsh.kandula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natalee Barber",
+    "email": "natalee.barber@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kevin Daliri",
+    "email": "kevin.daliri@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christopher Wyatt",
+    "email": "christopher.wyatt@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natalee Barber",
+    "email": "natalee.barber@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amberley Martinez",
+    "email": "amberley.martinez@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Justin Roffman",
+    "email": "justin.roffman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vasishta  Malisetty",
+    "email": "vasishta.malisetty@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ruohan  Li",
+    "email": "ruohan.li@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alex Schulz",
+    "email": "alex.schulz@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vasishta  Malisetty",
+    "email": "vasishta.malisetty@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Muneer Lalji",
+    "email": "muneer.lalji@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Haley Brooks",
+    "email": "haley.brooks@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liana  Zhang",
+    "email": "liana.zhang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liana  Zhang",
+    "email": "liana.zhang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Josh Batra",
+    "email": "josh.batra@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ansh Patel",
+    "email": "ansh.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nicholas Scaperdas",
+    "email": "nicholas.scaperdas@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Elise Cooke",
+    "email": "elise.cooke@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Elise Cooke",
+    "email": "elise.cooke@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Haley Brooks",
+    "email": "haley.brooks@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liana  Zhang",
+    "email": "liana.zhang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Grace Uecker",
+    "email": "grace.uecker@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matt McCoy",
+    "email": "matt.mccoy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matt McCoy",
+    "email": "matt.mccoy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eli Wiel",
+    "email": "eli.wiel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Carly Tamer",
+    "email": "carly.tamer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Josh Batra",
+    "email": "josh.batra@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ania Misiorek",
+    "email": "ania.misiorek@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Josephine Dermond",
+    "email": "josephine.dermond@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
     "name": "Aleena Narula",
-    "email": "aleena.narula@northeastern.edu",
-    "branch": "Software",
-    "role": "Product Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Ally Descoteaux",
-    "email": "ally.descoteaux@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Annika Kim",
-    "email": "annika.kim@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "email": "aleena.narula@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Dana Abdo",
-    "email": "dana.abdo@northeastern.edu",
-    "branch": "Software",
-    "role": "Design Lead",
-    "level": "Lead"
+    "name": "Eli Wiel",
+    "email": "eli.wiel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
   },
   {
-    "name": "Harsh Singh",
-    "email": "harsh.singh@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Olivier John Ndjike Nzia",
+    "email": "olivier.nzia@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Allison Xu",
+    "email": "allison.xu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Helen Cai",
+    "email": "helen.cai@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katie Dumigan",
+    "email": "katie.dumigan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jose Avila",
+    "email": "jose.avila@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chirag Chadha",
+    "email": "chirag.chadha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Neha Jain",
+    "email": "neha.jain@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Carly Tamer",
+    "email": "carly.tamer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Erin Furey",
+    "email": "erin.furey@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katie Dumigan",
+    "email": "katie.dumigan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jessica Luo",
+    "email": "jessica.luo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Carly Tamer",
+    "email": "carly.tamer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Maggie Tong",
+    "email": "maggie.tong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jason Widjaja",
+    "email": "jason.widjaja@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natalee Barber",
+    "email": "natalee.barber@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Emma Shek",
+    "email": "emma.shek@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Anna Birge",
+    "email": "anna.birge@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michael Marchev",
+    "email": "michael.marchev@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Neha Jha",
+    "email": "neha.jha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Bakir Jameell",
+    "email": "bakir.jameell@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Andrew Goldstein",
+    "email": "andrew.goldstein@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ava Gami",
+    "email": "ava.gami@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
     "name": "Kevin Matula",
-    "email": "kevin.matula@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "email": "kevin.matula@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Luis Sarmiento",
-    "email": "luis.sarmiento@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "William Jappe",
+    "email": "william.jappe@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Meira Wang",
-    "email": "meira.wang@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Daniel Vesga",
+    "email": "daniel.vesga@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Melody",
-    "email": "melody@northeastern.edu",
-    "branch": "Software",
-    "role": "Engineer",
+    "name": "Zahra Wibisana",
+    "email": "zahra.wibisana@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Yulan Wang",
+    "email": "yulan.wang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joshua Torre",
+    "email": "joshua.torre@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "David Yu",
+    "email": "david.yu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jack Toncelli",
+    "email": "jack.toncelli@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Benjamin Marler",
+    "email": "benjamin.marler@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chigozirim Ike Ike",
+    "email": "chigozirim.ike@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ravneet Kaur",
+    "email": "ravneet.kaur@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aarzu Choudhary",
+    "email": "aarzu.choudhary@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christopher Lutchman",
+    "email": "christopher.lutchman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liliana Palomino",
+    "email": "liliana.palomino@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dao Ho",
+    "email": "dao.ho@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Thanh Mai Nguyen",
+    "email": "thanh.nguyen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Zachary Croft",
+    "email": "zachary.croft@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sachin Patel",
+    "email": "sachin.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christian Georges",
+    "email": "christian.georges@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matthew Marsicano",
+    "email": "matthew.marsicano@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eli Zislis",
+    "email": "eli.zislis@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sophia Nguyen",
+    "email": "sophia.nguyen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nola Hallemeier",
+    "email": "nola.hallemeier@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christopher Pecora",
+    "email": "christopher.pecora@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dorthea Geroulakos",
+    "email": "dorthea.geroulakos@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Megan Lai",
+    "email": "megan.lai@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Rahul Muthuswamy",
+    "email": "rahul.muthuswamy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matthew Li",
+    "email": "matthew.li@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tony Giech",
+    "email": "tony.giech@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
     "name": "Michelle Li",
-    "email": "michelle.li@northeastern.edu",
-    "branch": "Software",
-    "role": "Tech Lead",
-    "level": "Lead"
-  },
-  {
-    "name": "Mihika Chalasani",
-    "email": "mihika.chalasani@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "email": "michelle.li@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   },
   {
-    "name": "Saidah ly",
-    "email": "saidah.ly@northeastern.edu",
-    "branch": "Software",
-    "role": "Designer",
+    "name": "Kaydence Lin",
+    "email": "kaydence.lin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michelle Montenegro",
+    "email": "michelle.montenegro@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sylvain MacGovern",
+    "email": "sylvain.macgovern@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Raul Pineda",
+    "email": "raul.pineda@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amanda Fong",
+    "email": "amanda.fong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tracy Huang",
+    "email": "tracy.huang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Lilly Hover",
+    "email": "lilly.hover@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vilasini Nathan",
+    "email": "vilasini.nathan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Elinor Stull",
+    "email": "elinor.stull@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Leonardo Chen",
+    "email": "leonardo.chen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Neha Chandran",
+    "email": "neha.chandran@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dana Abdo",
+    "email": "dana.abdo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mihir Narayan",
+    "email": "mihir.narayan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Abhik Ray",
+    "email": "abhik.ray@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alder Whiteford",
+    "email": "alder.whiteford@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Narayan Sharma",
+    "email": "narayan.sharma@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jason Widjaja",
+    "email": "jason.widjaja@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natalee Barber",
+    "email": "natalee.barber@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jonathan Chen",
+    "email": "jonathan.chen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Josephine Dermond",
+    "email": "josephine.dermond@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Grace Uecker",
+    "email": "grace.uecker@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Olivia Sedarski",
+    "email": "olivia.sedarski@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aleena Narula",
+    "email": "aleena.narula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vasishta Malisetty",
+    "email": "vasishta.malisetty@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christopher Wyatt",
+    "email": "christopher.wyatt@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Emma Shek",
+    "email": "emma.shek@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Niki Manolis",
+    "email": "niki.manolis@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sierra Welsch",
+    "email": "sierra.welsch@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tanisha Joshi",
+    "email": "tanisha.joshi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Melody Yu",
+    "email": "melody.yu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Haley Martin",
+    "email": "haley.martin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Arshia Mathur",
+    "email": "arshia.mathur@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Anna Bartlett",
+    "email": "anna.bartlett@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kalene Peterson",
+    "email": "kalene.peterson@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jiamei Goodwin",
+    "email": "jiamei.goodwin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Clare Hsu",
+    "email": "clare.hsu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alexandra Descoteaux",
+    "email": "alexandra.descoteaux@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Luisa Li",
+    "email": "luisa.li@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Audrey Wong",
+    "email": "audrey.wong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Brendan Coggins",
+    "email": "brendan.coggins@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Fahia Bashar",
+    "email": "fahia.bashar@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Angeli Lu",
+    "email": "angeli.lu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Caroline Xiong",
+    "email": "caroline.xiong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Abyan Nawaz",
+    "email": "abyan.nawaz@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aaron Kim",
+    "email": "aaron.kim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sean Vumbaco",
+    "email": "sean.vumbaco@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ana Her Hoa Torreao",
+    "email": "ana.torreao@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Hafsa Rehman",
+    "email": "hafsa.rehman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aidan Kane",
+    "email": "aidan.kane@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Maxwell Langweil",
+    "email": "maxwell.langweil@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Steven Lam",
+    "email": "steven.lam@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Augustus Sabino",
+    "email": "augustus.sabino@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nathaniel Sawant",
+    "email": "nathaniel.sawant@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ryan Saperstein",
+    "email": "ryan.saperstein@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kyle Sung",
+    "email": "kyle.sung@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jackson Terrill",
+    "email": "jackson.terrill@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vanessa Ashley Balin",
+    "email": "vanessa.balin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jona Fejzaj",
+    "email": "jona.fejzaj@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Simone Ritcheson",
+    "email": "simone.ritcheson@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Bryan Pitts",
+    "email": "bryan.pitts@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Lucia Brimmer",
+    "email": "lucia.brimmer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Gabriel Longoria",
+    "email": "gabriel.longoria@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Shashwat Navandar",
+    "email": "shashwat.navandar@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Deven Patel",
+    "email": "deven.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Paige Dubiac",
+    "email": "paige.dubiac@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katherine Zhang",
+    "email": "katherine.zhang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adityaa Chandna",
+    "email": "adityaa.chandna@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Benjamin Petrillo",
+    "email": "benjamin.petrillo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adam Ma",
+    "email": "adam.ma@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Rachel Ma",
+    "email": "rachel.ma@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nour Tawfik",
+    "email": "nour.tawfik@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Connie Lin",
+    "email": "connie.lin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Stone Liu",
+    "email": "stone.liu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sumer Shinde",
+    "email": "sumer.shinde@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alison Ryan",
+    "email": "alison.ryan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Melina Yang",
+    "email": "melina.yang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Annabelle Lien",
+    "email": "annabelle.lien@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alisa Nance",
+    "email": "alisa.nance@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mia Miller",
+    "email": "mia.miller@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jordan Spencer",
+    "email": "jordan.spencer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Caitlin Flynn",
+    "email": "caitlin.flynn@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jessica Luo",
+    "email": "jessica.luo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jani Passas",
+    "email": "jani.passas@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tejas Karwa",
+    "email": "tejas.karwa@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matias Dermond",
+    "email": "matias.dermond@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matt Prescott",
+    "email": "matt.prescott@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vishakh Talanki",
+    "email": "vishakh.talanki@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Daniel Lieben",
+    "email": "daniel.lieben@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Josh Batra",
+    "email": "josh.batra@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Bronwyn Spears",
+    "email": "bronwyn.spears@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mai Matsuhashi",
+    "email": "mai.matsuhashi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Maya Senescu",
+    "email": "maya.senescu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Smeet Patel",
+    "email": "smeet.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ben Rubin",
+    "email": "ben.rubin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Shashank Jarmale",
+    "email": "shashank.jarmale@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Haley Brooks",
+    "email": "haley.brooks@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Emmanuel Hong",
+    "email": "emmanuel.hong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Cameran Ko",
+    "email": "cameran.ko@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ryan Lonkart",
+    "email": "ryan.lonkart@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ellie Acuna",
+    "email": "ellie.acuna@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Henry deGrasse",
+    "email": "henry.degrasse@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Victoria Brennick",
+    "email": "victoria.brennick@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Leroy Shaigorodsky",
+    "email": "leroy.shaigorodsky@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michelle Wu",
+    "email": "michelle.wu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Helen Cai",
+    "email": "helen.cai@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amber McComb",
+    "email": "amber.mccomb@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sam Yip",
+    "email": "sam.yip@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sam Lewis",
+    "email": "sam.lewis@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kevin McGuire",
+    "email": "kevin.mcguire@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jocelyn Damato",
+    "email": "jocelyn.damato@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Brian Reicher",
+    "email": "brian.reicher@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alex Lian",
+    "email": "alex.lian@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mirah Gordon",
+    "email": "mirah.gordon@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Soohan Kim",
+    "email": "soohan.kim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Rohan Krishnamurthi",
+    "email": "rohan.krishnamurthi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ben Frothingham",
+    "email": "ben.frothingham@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liam Kowalski",
+    "email": "liam.kowalski@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Catherine Eng",
+    "email": "catherine.eng@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mayzie Hunter",
+    "email": "mayzie.hunter@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jay Srinivasan",
+    "email": "jay.srinivasan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vedanshi Shah",
+    "email": "vedanshi.shah@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alix Heudebourg",
+    "email": "alix.heudebourg@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Bobby Dubel",
+    "email": "bobby.dubel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jessica Brown",
+    "email": "jessica.brown@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Elise Cooke",
+    "email": "elise.cooke@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joseph Albert Lim",
+    "email": "joseph.lim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Daniel Devory",
+    "email": "daniel.devory@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Hank Lehning",
+    "email": "hank.lehning@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jessica Healey",
+    "email": "jessica.healey@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jack Stern",
+    "email": "jack.stern@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katherine Zeng",
+    "email": "katherine.zeng@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dylan Pham",
+    "email": "dylan.pham@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Isaac Sadhwani",
+    "email": "isaac.sadhwani@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Antonia Simas",
+    "email": "antonia.simas@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michael Gapud Remijan",
+    "email": "michael.remijan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Estefan Cervantes",
+    "email": "estefan.cervantes@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Andrew Abrego",
+    "email": "andrew.abrego@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Benjamin Wolff",
+    "email": "benjamin.wolff@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michelle Freeman",
+    "email": "michelle.freeman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sebastian Tremblay",
+    "email": "sebastian.tremblay@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kaden Du",
+    "email": "kaden.du@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nitya Goenka",
+    "email": "nitya.goenka@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nikolas Varga",
+    "email": "nikolas.varga@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ruohan Li",
+    "email": "ruohan.li@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kellan McCarthy",
+    "email": "kellan.mccarthy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ishaan Jhawar",
+    "email": "ishaan.jhawar@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amanda Kerr",
+    "email": "amanda.kerr@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Olivier John Ndjike Nzia",
+    "email": "olivier.nzia@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "David Abrahamyan",
+    "email": "david.abrahamyan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Samantha Moy",
+    "email": "samantha.moy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "William Ferros",
+    "email": "william.ferros@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ansh Patel",
+    "email": "ansh.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sean Suleski",
+    "email": "sean.suleski@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Linwood Blaisdell",
+    "email": "linwood.blaisdell@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Frank Anderson",
+    "email": "frank.anderson@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Anna Birge",
+    "email": "anna.birge@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chirag Chadha",
+    "email": "chirag.chadha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amberley Martinez",
+    "email": "amberley.martinez@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Cameron Plume",
+    "email": "cameron.plume@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aaliyah Yan",
+    "email": "aaliyah.yan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Hari Narayanam",
+    "email": "hari.narayanam@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Leadora Kyin",
+    "email": "leadora.kyin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Shreyas Pal",
+    "email": "shreyas.pal@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Erin Lee",
+    "email": "erin.lee@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sonal Gupta",
+    "email": "sonal.gupta@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ira Hysi",
+    "email": "ira.hysi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katie Dewhurst",
+    "email": "katie.dewhurst@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Abigail Kazan",
+    "email": "abigail.kazan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sandra Cao",
+    "email": "sandra.cao@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alysha Advani",
+    "email": "alysha.advani@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Simrin Ramchandani",
+    "email": "simrin.ramchandani@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Michael Salzman",
+    "email": "michael.salzman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Charles Amante",
+    "email": "charles.amante@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katrina Le",
+    "email": "katrina.le@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "William Fox",
+    "email": "william.fox@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Siddharth Gaikwad",
+    "email": "siddharth.gaikwad@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Lauren Phan",
+    "email": "lauren.phan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jayson Sella",
+    "email": "jayson.sella@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Omid Daliri",
+    "email": "omid.daliri@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tiffany Zheng",
+    "email": "tiffany.zheng@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tristan Phan",
+    "email": "tristan.phan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Garrett Ladley",
+    "email": "garrett.ladley@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Arhat Shah",
+    "email": "arhat.shah@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eunseo Kwak",
+    "email": "eunseo.kwak@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Urvi Bhojani",
+    "email": "urvi.bhojani@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Angela Wu",
+    "email": "angela.wu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Neha Joby",
+    "email": "neha.joby@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ethan Kjersgard",
+    "email": "ethan.kjersgard@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jeffrey Ochoa-Alvarez",
+    "email": "jeffrey.ochoa-alvarez@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natnaree Prapakamol",
+    "email": "natnaree.prapakamol@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kaamil Thobani",
+    "email": "kaamil.thobani@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Alex Schulz",
+    "email": "alex.schulz@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Maggie Tong",
+    "email": "maggie.tong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Muneer Lalji",
+    "email": "muneer.lalji@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Andrew Caplan",
+    "email": "andrew.caplan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Gili Fang",
+    "email": "gili.fang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sofie Teplitskiy",
+    "email": "sofie.teplitskiy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "David Oduneye",
+    "email": "david.oduneye@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liana  Zhang",
+    "email": "liana.zhang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Adharsh Kandula",
+    "email": "adharsh.kandula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Dessy Dusichka",
+    "email": "dessy.dusichka@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Danny Rollo",
+    "email": "danny.rollo@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Katie Dumigan",
+    "email": "katie.dumigan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Matt McCoy",
+    "email": "matt.mccoy@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ania Misiorek",
+    "email": "ania.misiorek@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jose Avila",
+    "email": "jose.avila@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Erin Furey",
+    "email": "erin.furey@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eli Wiel",
+    "email": "eli.wiel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Satya Sowri Sampath Korturti",
+    "email": "satya.korturti@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Carly Tamer",
+    "email": "carly.tamer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Justin Roffman",
+    "email": "justin.roffman@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jakob Philippe",
+    "email": "jakob.philippe@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nicholas Scaperdas",
+    "email": "nicholas.scaperdas@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Neha Jain",
+    "email": "neha.jain@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Akshay Dupuguntla",
+    "email": "akshay.dupuguntla@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sunny Huang",
+    "email": "sunny.huang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Logan Buchalter",
+    "email": "logan.buchalter@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Allison Xu",
+    "email": "allison.xu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ireh Hong",
+    "email": "ireh.hong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jas Yu",
+    "email": "jas.yu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Susan Kim",
+    "email": "susan.kim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jack Sweeney",
+    "email": "jack.sweeney@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Vedika  Donthi",
+    "email": "vedika.donthi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Andrew Rettig",
+    "email": "andrew.rettig@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aarav Raina",
+    "email": "aarav.raina@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Arav Budhiraja",
+    "email": "arav.budhiraja@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Afnan Tuffaha",
+    "email": "afnan.tuffaha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eric Kitagawa",
+    "email": "eric.kitagawa@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Rishi Kamtam",
+    "email": "rishi.kamtam@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mateo Wu Chen",
+    "email": "mateo.chen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Liu von Engelbrechten",
+    "email": "liu.engelbrechten@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joshua Song",
+    "email": "joshua.song@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jennifer Lavallee",
+    "email": "jennifer.lavallee@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Julia Faubus",
+    "email": "julia.faubus@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ava Rietz",
+    "email": "ava.rietz@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Wisena Joseph",
+    "email": "wisena.joseph@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Zainab Imadulla",
+    "email": "zainab.imadulla@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Abigail Reese",
+    "email": "abigail.reese@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Samantha Ko Ko",
+    "email": "samantha.ko@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chelsea Kwan",
+    "email": "chelsea.kwan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kaitlyn Mathis",
+    "email": "kaitlyn.mathis@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joyce Lee",
+    "email": "joyce.lee@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tyrus Kamenitzer",
+    "email": "tyrus.kamenitzer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Tara Standard",
+    "email": "tara.standard@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joshua Sharma",
+    "email": "joshua.sharma@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amy Shankar",
+    "email": "amy.shankar@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Catherine Morath",
+    "email": "catherine.morath@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Naesha Patel",
+    "email": "naesha.patel@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Mika Nguyen",
+    "email": "mika.nguyen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Charles Kim",
+    "email": "charles.kim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Annika Kim",
+    "email": "annika.kim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Jeffrey Burt",
+    "email": "jeffrey.burt@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ruben  Noroian",
+    "email": "ruben.noroian@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Cindy Lin",
+    "email": "cindy.lin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sahithi Gollakota",
+    "email": "sahithi.gollakota@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Isaac Polite",
+    "email": "isaac.polite@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Aahil Nishad",
+    "email": "aahil.nishad@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Qihong Wu",
+    "email": "qihong.wu@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eleanor Meltzer",
+    "email": "eleanor.meltzer@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Rohi Ahn",
+    "email": "rohi.ahn@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Nicholas Spaziano",
+    "email": "nicholas.spaziano@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sneha  Sridhar",
+    "email": "sneha.sridhar@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chrystalle Perez",
+    "email": "chrystalle.perez@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Abby Stevenson",
+    "email": "abby.stevenson@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Gokul Ramanan",
+    "email": "gokul.ramanan@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Victoria  Chin",
+    "email": "victoria.chin@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Ana Clara Costa",
+    "email": "ana.costa@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Edward Winslow",
+    "email": "edward.winslow@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Kimberly Tso",
+    "email": "kimberly.tso@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Devina Mogha",
+    "email": "devina.mogha@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Isabella Pozzi",
+    "email": "isabella.pozzi@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Deekshita Madhalam",
+    "email": "deekshita.madhalam@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Thomas Young",
+    "email": "thomas.young@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christopher Molinari",
+    "email": "christopher.molinari@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Chitraksha Kashyap",
+    "email": "chitraksha.kashyap@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Hannah Lai",
+    "email": "hannah.lai@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Natalie Kwong",
+    "email": "natalie.kwong@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Eitan Berenfeld",
+    "email": "eitan.berenfeld@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Meira Wang",
+    "email": "meira.wang@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Manuel Torres",
+    "email": "manuel.torres@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Henry Gao",
+    "email": "henry.gao@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Henry Gao",
+    "email": "henry.gao@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Amogh Athimamula",
+    "email": "amogh.athimamula@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Andrew Amante",
+    "email": "andrew.amante@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "William Rosen",
+    "email": "william.rosen@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Joshua Song",
+    "email": "joshua.song@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Christina McCabe",
+    "email": "christina.mccabe@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Gifti Aga",
+    "email": "gifti.aga@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Sadeel AL-Hazim",
+    "email": "sadeel.al-hazim@generatenu.com",
+    "branch": "",
+    "role": "",
+    "level": "Member"
+  },
+  {
+    "name": "Samantha Lioanag",
+    "email": "samantha.lioanag@generatenu.com",
+    "branch": "",
+    "role": "",
     "level": "Member"
   }
 ]

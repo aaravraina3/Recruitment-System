@@ -77,7 +77,7 @@ const BRANCH_DATA = {
       { id: 'ld-coordinator', title: 'L&D Coordinator', level: 'coordinator' },
       { id: 'alumni-chief', title: 'Alumni Relations Chief', level: 'chief' },
       { id: 'alumni-coordinator', title: 'Alumni Relations Coordinator', level: 'coordinator' },
-      { id: 'internal-lead', title: 'Internal Lead', level: 'lead' },
+      { id: 'chief-of-internal-insights', title: 'Chief of Internal Insights', level: 'chief' },
       { id: 'internal-analyst', title: 'Internal Analyst', level: 'engineer' }
     ]
   }
